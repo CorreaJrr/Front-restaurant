@@ -11,32 +11,32 @@ function Galeria() {
       <div className='wrapper'>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\components\imagenes\port-1.jpeg" alt="" />
+				<img src="src\assets\imagenes\port-1.jpeg" alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\components\imagenes\port-2.jpeg" alt="" />
+				<img src="src\assets\imagenes\port-2.jpeg" alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\components\imagenes\port-3.jpeg" alt="" />
+				<img src="src\assets\imagenes\port-3.jpeg" alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\components\imagenes\port-4.jpeg" alt="" />
+				<img src="src\assets\imagenes\port-4.jpeg" alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\components\imagenes\port-5.jpeg" alt="" />
+				<img src="src\assets\imagenes\port-5.jpeg" alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\components\imagenes\port-6.jpeg" alt="" />
+				<img src="src\assets\imagenes\port-6.jpeg" alt="" />
 			</a>
 		</div>
 	  </div>
@@ -50,7 +50,7 @@ function Galeria() {
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\components\imagenes\asado.jpeg" alt="asado" />
+								<img src="src\assets\imagenes\asado.jpeg" alt="asado" />
 							</div>
 							<h2>Asado</h2>
 							<p>Acompañada de guarnición</p>
@@ -59,7 +59,7 @@ function Galeria() {
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\components\imagenes\carbonada.jpg" alt="Carbonada" />
+								<img src="src\assets\imagenes\carbonada.jpg" alt="Carbonada" />
 							</div>
 							<h2>Carbonada</h2>
 							<p>Acompañada de variedades de panes</p>
@@ -68,7 +68,7 @@ function Galeria() {
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\components\imagenes\bife.jpg" alt="Bife" />
+								<img src="src\assets\imagenes\bife.jpg" alt="Bife" />
 							</div>
 							<h2>Bife</h2>
 							<p>Acompañada de guarnición</p>
@@ -77,7 +77,7 @@ function Galeria() {
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\components\imagenes\choripan.jpg" alt="Choripan" />
+								<img src="src\assets\imagenes\choripan.jpg" alt="Choripan" />
 							</div>
 							<h2>Choripan</h2>
 							<p>Acompañada de entrada</p>
@@ -86,7 +86,7 @@ function Galeria() {
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\components\imagenes\empanadas.jpg" alt="Empanadas" />
+								<img src="src\assets\imagenes\empanadas.jpg" alt="Empanadas" />
 							</div>
 							<h2>Empanadas</h2>
 							<p>Acompañada de entrada</p>
@@ -95,7 +95,7 @@ function Galeria() {
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\components\imagenes\locro.jpg" alt="Locro" />
+								<img src="src\assets\imagenes\locro.jpg" alt="Locro" />
 							</div>
 							<h2>Locro</h2>
 							<p>Acompañada de entrada</p>
@@ -104,7 +104,7 @@ function Galeria() {
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\components\imagenes\milanesa.jpg" alt="Milanesa" />
+								<img src="src\assets\imagenes\milanesa.jpg" alt="Milanesa" />
 							</div>
 							<h2>Milanesa</h2>
 							<p>Acompañada de guarnición</p>
@@ -113,7 +113,7 @@ function Galeria() {
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\components\imagenes\ñoqui.jpg" alt="Ñoquis de Papa" />
+								<img src="src\assets\imagenes\ñoqui.jpg" alt="Ñoquis de Papa" />
 							</div>
 							<h2>Ñoquis de Papa</h2>
 							<p>Acompañada de entrada</p>
@@ -129,32 +129,32 @@ function Galeria() {
       <div className='wrapper'>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\components\imagenes\port-7.jpeg" alt="" />
+				<img src="src\assets\imagenes\port-7.jpeg" alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\components\imagenes\port-8.jpeg" alt="" />
+				<img src="src\assets\imagenes\port-8.jpeg" alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\components\imagenes\port-9.jpeg" alt="" />
+				<img src="src\assets\imagenes\port-9.jpeg" alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\components\imagenes\port-10.jpeg" alt="" />
+				<img src="src\assets\imagenes\port-10.jpeg" alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\components\imagenes\port-11.jpeg" alt="" />
+				<img src="src\assets\imagenes\port-11.jpeg" alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\components\imagenes\port-12.jpeg" alt="" />
+				<img src="src\assets\imagenes\port-12.jpeg" alt="" />
 			</a>
 		</div>
 	  </div>
@@ -168,7 +168,7 @@ function Galeria() {
 					<div class="card-Desayuno">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\components\imagenes\medialunas.jpg" alt="Medialunas" />
+								<img src="src\assets\imagenes\medialunas.jpg" alt="Medialunas" />
 							</div>
 							<h2>Medialunas</h2>
 							<p>Acompañada de cualquier infusion</p>
@@ -177,7 +177,7 @@ function Galeria() {
 					<div class="card-Desayuno">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\components\imagenes\churros.jpg" alt="Churros" />
+								<img src="src\assets\imagenes\churros.jpg" alt="Churros" />
 							</div>
 							<h2>Churros</h2>
 							<p>Acompañada de cualquier infusion</p>
@@ -186,7 +186,7 @@ function Galeria() {
 					<div class="card-Desayuno">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\components\imagenes\chipa.jpg" alt="Chipa" />
+								<img src="src\assets\imagenes\chipa.jpg" alt="Chipa" />
 							</div>
 							<h2>Chipa</h2>
 							<p>Acompañada de cualquier infusion</p>
@@ -195,7 +195,7 @@ function Galeria() {
 					<div class="card-Desayuno">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\components\imagenes\tortasnegras.jpg" alt="Torta-Negra" />
+								<img src="src\assets\imagenes\tortasnegras.jpg" alt="Torta-Negra" />
 							</div>
 							<h2>Torta Negra</h2>
 							<p>Acompañada de cualquier infusion</p>
@@ -204,7 +204,7 @@ function Galeria() {
                     <div class="card-Desayuno">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\components\imagenes\rojel.jpeg" alt="Torta Rojel" />
+								<img src="src\assets\imagenes\rojel.jpeg" alt="Torta Rojel" />
 							</div>
 							<h2>Chipa</h2>
 							<p>Acompañada de cualquier infusion</p>
@@ -213,7 +213,7 @@ function Galeria() {
                     <div class="card-Desayuno">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\components\imagenes\alfajores.jpeg" alt="Alfajores" />
+								<img src="src\assets\imagenes\alfajores.jpeg" alt="Alfajores" />
 							</div>
 							<h2>Chipa</h2>
 							<p>Acompañada de cualquier infusion</p>
@@ -222,7 +222,7 @@ function Galeria() {
                     <div class="card-Desayuno">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\components\imagenes\bolasdefraile.jpeg" alt="Bolas de Fraile" />
+								<img src="src\assets\imagenes\bolasdefraile.jpeg" alt="Bolas de Fraile" />
 							</div>
 							<h2>Chipa</h2>
 							<p>Acompañada de cualquier infusion</p>
@@ -231,7 +231,7 @@ function Galeria() {
                     <div class="card-Desayuno">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\components\imagenes\pastafrola.jpeg" alt="Pasta Frola" />
+								<img src="src\assets\imagenes\pastafrola.jpeg" alt="Pasta Frola" />
 							</div>
 							<h2>Chipa</h2>
 							<p>Acompañada de cualquier infusion</p>
