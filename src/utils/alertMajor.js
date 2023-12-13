@@ -30,4 +30,4 @@ export const alertGenericQuestion = (message, title, action) => {
       }
     }
   });
-};import Swal from 'sweetalert2';
+};
