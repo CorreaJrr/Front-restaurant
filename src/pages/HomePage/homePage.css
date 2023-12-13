@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=DM+Serif+Display&family=Fresca&family=Libre+Baskerville&display=swap');
+body {
+  
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 50%, rgba(224, 224, 224, 1) 100%);
+  font-family: 'DM Serif Display', serif;
+}
+
+.titulo1 {
+  color: rgb(243, 243, 241);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  display: inline-block;
+  font-size: 30px;
+}
+
+
+
+ video{
+  width: 100%;
+  height: 100hv;
+  object-fit: cover;
+ }
+
+
+.portadA {
+ background-image: url(../public/images/restaurant.jpg);
+ object-fit: cover;
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-size: cover;
+
+}
+
+.box-content a,
+.box-content h2,
+.box-content h3,
+.box-content h6 {
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.box-content h2,
+.box-content h3,
+.box-content p {
+  font-weight: 150px;
+}
+
+.box-content h2 {
+  font-size: 3.1rem;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.box-content h6 {
+  background-color: #ca992e;
+  color: #000;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.5rem;
+  display: inline-block;
+  margin-bottom: 2px;
+  font-size: 0.8rem;
+}
+
+.saborP{
+  /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); */
+  /* backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  display: inline-block; */
+  font-size: 20px;
+}
+
+.infO{
+  background-color: #ca992e;
+  color: #000;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.5rem;
+  display: inline-block;
+  margin-bottom: 2px;
+  font-size: 0.8rem;
+  
+}
+
+.box-content {
+  background-color: rgba(0, 0, 0, 0.772);
+  padding: 2rem;
+  color: #fff;
+}
+
+.box-content hr {
+  border: 3px solid #ca992e;
+  width: 2rem;
+  opacity: 1;
+}
+
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  border: 0;
+  border-top: 1px solid;
+  opacity: .25;
+}
+
+
+.saboR {
+  color: #28799c;
+}
+
+.portadaT {
+  border-left: 6px solid #762123;
+}
+
+/* COLORE DE TARJETA DE SABOR A */
+.saborA {
+  background-color: #17181D;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+}
+
+/* descripcion de sabor argentino */
+.blackk {
+  background-color: #f3f1ec;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.informacion{
+  background-color: #000
+}
+
+.titlteee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.parraff {
+  color: aliceblue;
+  padding-bottom: 18px;
+}
+
+.cardsP {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-around;
+  background: rgb(4, 4, 4);
+  background: linear-gradient(90deg, rgba(4, 4, 4, 1) 41%, rgb(215, 200, 68) 100%);
+}
+
+/* de bienvenido */
+.titulo2 {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ca992e;
+
+
+}
+
+/* platos mas elegido */
+.platoS {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #ca992e; */
+
+}
+
+
+
+
+.cardsB {
+  background: rgb(52, 126, 158);
+  background: linear-gradient(180deg, rgba(52, 126, 158, 1) 6%, rgba(34, 38, 40, 1) 65%);
+}
+
+.divB {
+  display: flex;
+  justify-content: center;
+}
+
+.botoN {
+  background-color: rgb(237, 195, 79);
+  display: flex;
+  justify-content: center;
+}
+
+.imgCa {
+  height: 550px;
+}
+
+.resevaS {
+  background-color: #0f0f0e;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.imgcardS {
+  background-color: #0f0f0e;
+}
+
+.cards {
+  transition: 0.7s;
+  object-fit: cover;
+}
+
+.cards:hover {
+  transform: scale(1.1);
+}
+
+.picada {
+  border-radius: 20px;
+}
+
+.imagenPi {
+  display: flex;
+  justify-content: center;
+  border-radius: px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  object-fit: cover;
+
+}
+
+.imagenPi:hover {
+  transform: scale(1.1);
+}
+
+.picada {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  object-fit: cover;
+}
+
+.picada:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width:761px) {
+
+  .imgCa {
+    height: 250px;
+  }
+
+  .cards:hover {
+    transform: scale(1.0);
+  }
+
+  .imagenPi:hover {
+    transform: scale(1.0);
+  }
+
+  .box-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .casA{
+    width: 100%;
+  }
+
+  .portadaT {
+    border: none;
+  }
+
+  .px-4 {
+    padding-right: 1rem!important;
+    padding-left: 1rem!important;
+}
+
+.pelicula-principal2{
+  font-size: 9px;
+}
+.pelicula-principal2 .descripcion{
+   max-width: 100%;
+   font-size: 1.5em ;
+}
+
+}
