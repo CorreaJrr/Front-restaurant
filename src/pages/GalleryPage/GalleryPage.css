@@ -65,6 +65,9 @@
 
 @media (max-width:768px){
     .img-area{
+        transform: scale(1.0);
+        flex-direction: row;
+        width: 40%;
         padding: 0%;
     }
     .wrapper{
@@ -73,7 +76,9 @@
     }
 
     .single-box img{
-        width: 50%;
+        transform: scale(1.0);
+        flex-direction: row;
+        width: 40%;
     }
 }
 
@@ -152,10 +157,13 @@
 
  @media screen and (max-width: 850px) {
     .main h3{
+        padding: 0%;
         font-size: medium;
     }
     .card-Almuerzo{
-        font-size: larger;
-        width: 60%;
+        flex-direction: row;
+        padding: 0%;
+        font-size: medium;
+        width: 90%;
     }
 } 
