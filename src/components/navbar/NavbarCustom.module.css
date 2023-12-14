@@ -1,0 +1,14 @@
+.navButton {
+    transition: all 0.2s;
+    position: relative;
+}
+
+.navButton:hover::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: #5C7E10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
