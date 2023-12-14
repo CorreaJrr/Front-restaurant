@@ -206,7 +206,7 @@ function Galeria() {
 							<div class="card-img">
 								<img src="src\assets\imagenes\rojel.jpeg" alt="Torta Rojel" />
 							</div>
-							<h2>Chipa</h2>
+							<h2>Torta Rojel</h2>
 							<p>Acompañada de cualquier infusion</p>
 						</div>
 					</div>
@@ -215,7 +215,7 @@ function Galeria() {
 							<div class="card-img">
 								<img src="src\assets\imagenes\alfajores.jpeg" alt="Alfajores" />
 							</div>
-							<h2>Chipa</h2>
+							<h2>Alfajores</h2>
 							<p>Acompañada de cualquier infusion</p>
 						</div>
 					</div>
@@ -224,7 +224,7 @@ function Galeria() {
 							<div class="card-img">
 								<img src="src\assets\imagenes\bolasdefraile.jpeg" alt="Bolas de Fraile" />
 							</div>
-							<h2>Chipa</h2>
+							<h2>Bolas de Fraile</h2>
 							<p>Acompañada de cualquier infusion</p>
 						</div>
 					</div>
@@ -233,7 +233,7 @@ function Galeria() {
 							<div class="card-img">
 								<img src="src\assets\imagenes\pastafrola.jpeg" alt="Pasta Frola" />
 							</div>
-							<h2>Chipa</h2>
+							<h2>Pasta Frola</h2>
 							<p>Acompañada de cualquier infusion</p>
 						</div>
 					</div>
