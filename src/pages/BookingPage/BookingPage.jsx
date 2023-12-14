@@ -6,7 +6,7 @@ import calendar from '../../utils/valiDate';
 import axios from 'axios';
 import { alertGeneric } from "../../utils/alertMajor";
 
-import '../../styles/snowEffect.css'
+import '../BookingPage/snowEffect.css'
 
 
 
@@ -24,21 +24,31 @@ const BookingPage = () => {
     e.preventDefault();
     setMessage('');
     try {
+      /*
       const { data } = await axios.get(`${URL_BASE}/bookings/`)
       data.map((booking) => {
         if (BookingData === booking)
         return alertGeneric(mensajes.serverErrorGeneric, 'Ya hay una reserva tomada para ese momento', 'error')
       })
-      if (BookingData.day <= calendar.getDate()) {
+      */
+      if (BookingData.day < calendar.getDate() && BookingData.month == calendar.getMonth()) {
         return alertGeneric(mensajes.serverErrorGeneric, 'Nos viste cara de Marty Mcfly?', 'error')
       }
-      if (BookingData.month < calendar.getMonth()) {
+      /*if (BookingData.month < calendar.getMonth()) {
         return alertGeneric(mensajes.serverErrorGeneric, 'Nos viste cara de Marty Mcfly?', 'error')
+      }*/
+      if (BookingData.month == 2 && 28 < BookingData.day) {
+        return alertGeneric(mensajes.serverErrorGeneric, 'Como que no existe la fecha', 'error')
       }
-      if (BookingData.day && BookingData.month && BookingData.hour <= calendar.getHours()) {
-        return alertGeneric(mensajes.serverErrorGeneric, 'Nos viste cara de Marty Mcfly?', 'error')
+      if (BookingData.month == 4 || BookingData.month == 6 || BookingData.month == 9 || BookingData.month == 11) {
+        if (30 < BookingData.day) {
+          return alertGeneric(mensajes.serverErrorGeneric, 'Como que no existe la fecha', 'error')
+        } else {
+          /*await axios.post(`${URL_BASE}/bookings/create`, BookingData)*/
+          return alertGeneric(mensajes.bookingSuccess, 'Reserva realizada con exito', 'success')
+        }
       }
-      await axios.post(`${URL_BASE}/bookings/create`, BookingData)
+      /*await axios.post(`${URL_BASE}/bookings/create`, BookingData)*/
       return alertGeneric(mensajes.bookingSuccess, 'Reserva realizada con exito', 'success')
     } catch (error) {
       alertGeneric(mensajes.serverErrorGeneric, 'Ocurrio un error al procesar la solicitud', 'error')
