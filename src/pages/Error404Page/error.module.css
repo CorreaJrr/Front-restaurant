@@ -1,0 +1,35 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+  }
+  
+  .contenedor {
+    background-image: url("./assets/11.comida-italiana-ingredientes_1220-4676.jpg");
+    background-repeat: no-repeat;
+    background-size: 120% 120%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .error {
+    padding: 0px;
+    margin-top: 0px;
+    background-image: url("./assets/11.comida-italiana-ingredientes_1220-4676.jpg");
+    background-size: 400%;
+    background-repeat: no-repeat;
+    width: 70%;
+    height: 70%;
+    border-radius: 25px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .texto {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 50px;
+  }
+  
