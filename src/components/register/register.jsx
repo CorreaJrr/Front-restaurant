@@ -1,3 +1,4 @@
+import './RegisterStyles.css'
 import React, { useState } from 'react';
 import { Col, Row, Container, Form, Button } from 'react-bootstrap';
 import { messages } from '../../utils/messages';
