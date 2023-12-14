@@ -5,7 +5,7 @@ import '../galeria_de_imagenes/Galeria.css';
 function Galeria() {
   return (
     <div className='main'>
-    <h1 align="center" color=''>Platoooos Fuertes</h1>
+    <h1 align="center" color=''>Platos Fuertes</h1>
     <h3>Nuestra carta inspirada por grandes chefs argentinos ofrece una gran variedad de platos, tanto del Norte Como del nuestro Sur, de sus platos más importantes de toda la Argentina, siempre podes acompañar de nuestra experiencia gastronómica con los mejores vinos. No te limites a la experiencia y deja que tu paladar recorra cada sabor desde Jujuy hasta Tierra del fuego.</h3>
     <div className='Imagenes-Portada'>
       <div className='wrapper'>
