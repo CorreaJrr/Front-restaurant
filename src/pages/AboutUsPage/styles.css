@@ -16,7 +16,6 @@
 #slider {
     margin-top:50px;
 }
-
 #slider::before, #slider::after {
     background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
     content: "";
