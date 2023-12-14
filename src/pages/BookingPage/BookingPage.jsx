@@ -101,7 +101,7 @@ const BookingPage = () => {
     </div>
   </div>
     <Container>
-      <Row className='justify-content-center my-5'>
+      <Row className='bodyR pt-5 pb-5'>
         <Col xs={12} md={8} lg={6}>
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" >

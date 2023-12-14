@@ -1,7 +1,7 @@
 import './RegisterStyles.css'
 import React, { useState } from 'react';
 import { Col, Row, Container, Form, Button } from 'react-bootstrap';
-import { messages } from '../../utils/messages';
+import { mensajes } from '../../utils/messages';
 import { alertGeneric } from '../../utils/alertMajor';
 import { endPoints } from '../../utils/endPoints';
 import axios from 'axios';
@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Register = () => {
+  const [isLoading, setIsLoading] = useState(false)
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
@@ -19,27 +20,27 @@ const Register = () => {
     termsAndConditions: null,
     date: new Date(),
   });
-  const [message, setMessage] = useState('');
+  const [mensaje, setMensaje] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const validationEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     const validationPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
 
-    if(!validationEmail.test(formData.email)) return alertGeneric(messages.failEmailFormat,'Uppss..', 'error');
-    if (formData.password !== formData.passwordCheck) return alertGeneric(messages.failPasswordCheck,'Uppss..', 'error');
-    if (!validationPass.test(formData.password)) return alertGeneric(messages.failPasswordFormat,'Uppss..', 'error');
+    if(!validationEmail.test(formData.email)) return alertGeneric(mensajes.failEmailFormat,'Uppss..', 'error');
+    if (formData.password !== formData.passwordCheck) return alertGeneric(mensajes.failPasswordCheck,'Uppss..', 'error');
+    if (!validationPass.test(formData.password)) return alertGeneric(mensajes.failPasswordFormat,'Uppss..', 'error');
 
     try {
       setIsLoading(true)
       const { data } = await axios.get(`${endPoints.user}/?email=${formData.email}`);
       
-      if (data.length !== 0) return alertGeneric(messages.userAlreadyExist, 'Uppss...', 'error');
+      if (data.length !== 0) return alertGeneric(mensajes.userAlreadyExist, 'Uppss...', 'error');
       
       await axios.post(endPoints.user, formData);
-      alertGeneric(messages.registerSuccess, 'Exito', 'success', () => navigate('/login'));
+      alertGeneric(mensajes.registerSuccess, 'Exito', 'success', () => navigate('/login'));
     } catch (error) {
-      alertGeneric(messages.genericErrorPost, 'Uppss...', 'error');
+      alertGeneric(mensajes.genericErrorPost, 'Uppss...', 'error');
     } finally {
       setIsLoading(false);
     }
@@ -54,8 +55,8 @@ const Register = () => {
   };
 
   return (
-    <Container>
-
+  <Container id='container1'>
+    <Container id='container2'>
         <Col xs={12} md={8} lg={6}>
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" >
@@ -82,7 +83,7 @@ const Register = () => {
               <Form.Check type="checkbox" label="Acept terms and conditions" required name='termsAndConditions' onChange={handleFormDataChange}/>
             </Form.Group>
             <Col className='text-danger my-3'>
-              <strong>{message}</strong>
+              <strong>{mensaje}</strong>
             </Col>
             <Button variant="primary" type="submit">
               Submit
@@ -90,6 +91,7 @@ const Register = () => {
           </Form>
         </Col>
     </Container>
+  </Container>
   )
 }
 
