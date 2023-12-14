@@ -1,6 +1,7 @@
 import { Navbar, Container, Nav, Row, Col, Image } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import '../HomePage/homePage.css';
 
 const Homepage = () => {
   return (
