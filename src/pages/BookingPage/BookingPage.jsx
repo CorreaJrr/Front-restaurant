@@ -24,7 +24,7 @@ const BookingPage = () => {
     e.preventDefault();
     setMessage('');
     try {
-      /*
+      /* Cuando este el deploy del backend, editar la URL y descomentar!
       const { data } = await axios.get(`${URL_BASE}/bookings/`)
       data.map((booking) => {
         if (BookingData === booking)
@@ -44,11 +44,15 @@ const BookingPage = () => {
         if (30 < BookingData.day) {
           return alertGeneric(mensajes.serverErrorGeneric, 'Como que no existe la fecha', 'error')
         } else {
-          /*await axios.post(`${URL_BASE}/bookings/create`, BookingData)*/
+          /* Cuando este el deploy del backend, editar la URL y descomentar!
+          await axios.post(`${URL_BASE}/bookings/create`, BookingData)
+          */
           return alertGeneric(mensajes.bookingSuccess, 'Reserva realizada con exito', 'success')
         }
       }
-      /*await axios.post(`${URL_BASE}/bookings/create`, BookingData)*/
+      /*  Cuando este el deploy del backend, editar la URL y descomentar!
+      await axios.post(`${URL_BASE}/bookings/create`, BookingData)
+      */
       return alertGeneric(mensajes.bookingSuccess, 'Reserva realizada con exito', 'success')
     } catch (error) {
       alertGeneric(mensajes.serverErrorGeneric, 'Ocurrio un error al procesar la solicitud', 'error')
