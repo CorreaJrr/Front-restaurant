@@ -1,4 +1,5 @@
 export const mensajes = {
+    bookingSuccess: 'Tu Reserva fue añadida correctamente',
     registerSuccess: 'Bien Maester te registrate correctamente',
     loginSuccess: 'Ingreso el genio del futbol mundial',
     titleSuccesslog: 'Bienvenido barrilete cosmico',

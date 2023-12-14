@@ -66,39 +66,39 @@
 }
 
 #slide:nth-child(1), #slide:nth-child(10) {
-    background-image: url('../images/avatar2.png');
+    background-image: url('../../assets/images/avatar2.png');
 }
 
 #slide:nth-child(2), #slide:nth-child(11) {
-    background-image: url('../images/avatar7.png');
+    background-image: url('../../assets/images/avatar7.png');
 }
 
 #slide:nth-child(3), #slide:nth-child(12) {
-    background-image: url('../images/avatar6.png');
+    background-image: url('../../assets/images/avatar6.png');
 }
 
 #slide:nth-child(4), #slide:nth-child(13) {
-    background-image: url('../images/avatar1.png');
+    background-image: url('../../assets/images/avatar1.png');
 }
 
 #slide:nth-child(5), #slide:nth-child(14) {
-    background-image: url('../images/avatar3.png');
+    background-image: url('../../assets/images/avatar3.png');
 }
 
 #slide:nth-child(6), #slide:nth-child(15) {
-    background-image: url('../images/avt1.png');
+    background-image: url('../../assets/images/avt1.png');
 }
 
 #slide:nth-child(7), #slide:nth-child(16) {
-    background-image: url('../images/avatar8.png');
+    background-image: url('../../assets/images/avatar8.png');
 }
 
 #slide:nth-child(8), #slide:nth-child(17) {
-    background-image: url('../images/avatar8.png');
+    background-image: url('../../assets/images/avatar1.png');
 }
 
 #slide:nth-child(9), #slide:nth-child(18) {
-    background-image: url('../images/avatar1.png');
+    background-image: url('../../assets/images/avatar3.png');
 }
 
 @keyframes scroll {
