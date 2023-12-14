@@ -2,7 +2,7 @@ import './RegisterStyles.css'
 import React, { useState } from 'react';
 import { Col, Row, Container, Form, Button } from 'react-bootstrap';
 import { messages } from '../../utils/messages';
-import { alertGeneric } from '../../utils/alertCustom';
+import { alertGeneric } from '../../utils/alertMajor';
 import { endPoints } from '../../utils/endPoints';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';

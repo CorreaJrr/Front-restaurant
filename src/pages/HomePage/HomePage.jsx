@@ -5,7 +5,6 @@ import '../HomePage/homePage.css';
 
 const Homepage = () => {
   return (
-
     <div className='app'>
         <main className=' container-fluid'>
           <section className='absolute'>
@@ -21,7 +20,7 @@ const Homepage = () => {
               <div className=' box-content     '>
                 <div className='portadaT px-4 '>
                   <h6 className=' text-white mt-3'> SENTITE EN CASA </h6>
-                  <h2 className='text-white '>sabor argentino</h2>
+                  <h2 className='text-white '>Sabor Argentino</h2>
                   <hr />
                   <p className='saborP text-white px-3  '>Bienvenidos/as a "SABOR ARGENTO", un rincón gastronómico que nació de la pasión por la rica y diversa cocina de Argentina. Fundado en la encantadora ciudad de Buenos Aires hace más de tres décadas por un grupo de amigos apasionados por su cultura culinaria.</p>
                 </div>
@@ -104,7 +103,7 @@ const Homepage = () => {
                   </p>
                   {/* cambiar color del boton */}
                   <div className='divB pb-3'>
-                    <Button className='botoN  mb-2 text-dark' variant="primary">reservar</Button>
+                    <Button className='botoN  mb-2 text-dark' variant="primary">Reservar Ahora</Button>
                   </div>
                 </Col>
                 <Col className=' mt-1' sm={6} >
@@ -118,8 +117,6 @@ const Homepage = () => {
 
         </main>
     </div>
-
-
   )
 }
 
