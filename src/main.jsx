@@ -5,6 +5,8 @@ import HomePage from './pages/HomePage/HomePage.jsx';
 import LoginPage from './pages/LoginPage/LoginPage.jsx';
 import RegisterPage from './pages/RegisterPage/RegisterPage.jsx';
 import NavbarCustom from './components/navbar/NavbarCustom.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './components/navbar/NavbarCustom.module.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
