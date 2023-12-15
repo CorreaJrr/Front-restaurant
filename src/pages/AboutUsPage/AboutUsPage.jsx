@@ -1,5 +1,5 @@
 import React from 'react'
-import '../AboutUsPage/styles.css'
+import 'src\pages\AboutUsPage\styles.css'
 
 
 const AboutUsPage = () => {
