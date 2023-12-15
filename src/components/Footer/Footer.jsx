@@ -1,6 +1,5 @@
 import React from 'react'
 import '../footer/Footer.css'
-import 'react-icons/bi'
 import { BiLogoGmail, BiLogoInstagram, BiSolidPhone } from "react-icons/bi";
 
 function Footer() {

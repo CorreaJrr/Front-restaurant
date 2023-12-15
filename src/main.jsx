@@ -10,10 +10,11 @@ import AboutUsPage from './pages/AboutUsPage/AboutUsPage.jsx';
 import BookingPage from './pages/BookingPage/BookingPage.jsx';
 import AdminPage from './pages/AdminPage/AdminPage.jsx';
 import Footer from './components/Footer/Footer.jsx';
+import GalleryPage from './pages/GalleryPage/GalleryPage.jsx';
 import Register from './pages/RegisterPage/register.jsx';
 import HomePage from './pages/HomePage/HomePage.jsx';
 import LoginPage from './pages/LoginPage/login.jsx';
-import RegisterPage from './pages/RegisterPage/RegisterPage.jsx';
+import RegisterPage from './pages/RegisterPage/register.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='/' element={<HomePage/>} />
       <Route path='/login' element={<LoginPage/>} />
       <Route path='/register' element={<RegisterPage/>} />
+      <Route path='/gallery' element={<GalleryPage/>} />
     </Routes>
     <Footer/>
     </BrowserRouter>
