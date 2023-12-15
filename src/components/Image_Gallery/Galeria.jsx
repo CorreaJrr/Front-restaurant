@@ -1,5 +1,5 @@
 import React from 'react';
-import '../galeria_de_imagenes/Galeria.css';
+import '../Image_Gallery/Galeria.css';
 <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@600&display=swap" rel="stylesheet"></link>
 
 function Galeria() {
