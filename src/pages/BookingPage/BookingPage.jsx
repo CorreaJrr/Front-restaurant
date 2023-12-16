@@ -5,7 +5,6 @@ import { useState } from 'react';
 import calendar from '../../utils/valiDate';
 import axios from 'axios';
 import { alertGeneric } from "../../utils/alertMajor";
-
 import '../BookingPage/snowEffect.css'
 
 
