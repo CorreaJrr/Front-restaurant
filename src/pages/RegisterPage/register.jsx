@@ -74,19 +74,14 @@ const Register = () => {
             <Form.Group className="mb-3">
               <Form.Label>Password</Form.Label>
               <Form.Control
-                type="password"
-                placeholder="Password"
-                required
-                name='password'
-                onChange={handleFormDataChange}
-              />
-              <small id="password-help" style={{ color: 'red', fontSize: '0.8em' }}>
+                type="password"placeholder="Password"required minLength={8} maxLength={10} name='password'onChange={handleFormDataChange}/>
+              <small id="password-help" style={{ color: 'red', fontSize: '0.7em' }}>
                 Debe contener entre 8 y 10 caracteres, incluyendo al menos 1 mayúscula y 1 número
               </small>
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Repeat password</Form.Label>
-              <Form.Control type="password" placeholder="Repeat password" required name='passwordCheck' onChange={handleFormDataChange}/>
+              <Form.Control type="password" placeholder="Repeat password" required minLength={8} maxLength={10} name='passwordCheck' onChange={handleFormDataChange}/>
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Check type="checkbox" label="Accept terms and conditions" required name='termsAndConditions' onChange={handleFormDataChange}/>
