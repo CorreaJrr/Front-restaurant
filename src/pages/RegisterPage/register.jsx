@@ -20,9 +20,15 @@ const Register = () => {
     date: new Date(),
   });
   const [mensaje, setMensaje] = useState('');
+  const [termsAccepted, setTermsAccepted] = useState(false); // Estado para controlar la aceptación de términos
 
   const handleFormDataChange = (e) => {
     const { name, value, type, checked } = e.target;
+
+    if (name === 'termsAndConditions') {
+      setTermsAccepted(checked);
+    }
+
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: type === 'checkbox' ? checked : value,
@@ -38,6 +44,11 @@ const Register = () => {
     if (!validationEmail.test(formData.email)) return alertGeneric(mensajes.failEmailFormat,'Uppss..', 'error');
     if (formData.password !== formData.passwordCheck) return alertGeneric(mensajes.failPasswordCheck,'Uppss..', 'error');
     if (!validationPass.test(formData.password)) return alertGeneric(mensajes.failPasswordFormat,'Uppss..', 'error');
+
+    if (!termsAccepted) { // Validación de términos y condiciones
+      setMensaje('Debes aceptar los términos y condiciones.');
+      return;
+    }
 
     try {
       setIsLoading(true);
@@ -74,8 +85,15 @@ const Register = () => {
             <Form.Group className="mb-3">
               <Form.Label>Password</Form.Label>
               <Form.Control
-                type="password"placeholder="Password"required minLength={8} maxLength={10} name='password'onChange={handleFormDataChange}/>
-              <small id="password-help" style={{ color: 'red', fontSize: '0.7em' }}>
+                type="password"
+                placeholder="Password"
+                required
+                minLength={8}
+                maxLength={10}
+                name='password'
+                onChange={handleFormDataChange}
+              />
+              <small id="password-help" style={{ color: 'red', fontSize: '1em' }} className="bold-text">
                 Debe contener entre 8 y 10 caracteres, incluyendo al menos 1 mayúscula y 1 número
               </small>
             </Form.Group>
@@ -84,11 +102,15 @@ const Register = () => {
               <Form.Control type="password" placeholder="Repeat password" required minLength={8} maxLength={10} name='passwordCheck' onChange={handleFormDataChange}/>
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Check type="checkbox" label="Accept terms and conditions" required name='termsAndConditions' onChange={handleFormDataChange}/>
+              <Form.Check
+                type="checkbox"
+                label="Accept terms and conditions"
+                required
+                name='termsAndConditions'
+                onChange={handleFormDataChange}
+              />
+              {mensaje && <div className='text-danger'>{mensaje}</div>}
             </Form.Group>
-            <Col className='text-danger my-3'>
-              <strong>{mensaje}</strong>
-            </Col>
             <Button variant="primary" type="submit">
               Submit
             </Button>

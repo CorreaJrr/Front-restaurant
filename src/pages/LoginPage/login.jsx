@@ -6,9 +6,8 @@ import { alertGeneric } from '../../utils/alertMajor';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-
 const Login = () => {
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
   const [mensaje, setMensaje] = useState('');
   const URL_BASE = import.meta.env.VITE_URL_BASE;
   const navigate = useNavigate();
@@ -20,8 +19,23 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMensaje('');
+    
+    // Validación básica del formato de correo electrónico
+    const emailValidation = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailValidation.test(formData.email)) {
+      setMensaje('El formato del correo electrónico es inválido.');
+      return;
+    }
+
+    // Validación de longitud de la contraseña
+    if (formData.password.length < 8 || formData.password.length > 20) {
+      setMensaje('La contraseña debe tener entre 8 y 20 caracteres.');
+      return;
+    }
+
     try {
-      const {data} = await axios.post(`${URL_BASE}/login`, formData);
+      setIsLoading(true);
+      const { data } = await axios.post(`${URL_BASE}/login`, formData);
 
       if (typeof data === 'string') return alertGeneric(data, 'Uppss...', 'error');
 
@@ -45,31 +59,31 @@ const Login = () => {
   };
 
   return (
-  <Container className='' id='container1' >
-    <Container className='' id='container2'>
-      <Row className='justify-content-center my-5'>
-        <h1>Login</h1>
-        <Col xs={12} md={8} lg={6}>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" >
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="text" placeholder="Enter email" name='email' required onChange={handleChangeFormData}/>
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" name='password' required onChange={handleChangeFormData}/>
-            </Form.Group>
-            <Col className='text-danger my-3'>
-              <strong>{mensaje}</strong>
-            </Col>
-            <Button variant="primary" type="submit" disabled={isLoading}>
-              {isLoading ? 'Cargando...' : 'Login'}
-            </Button>
-          </Form>
-        </Col>
-      </Row>
+    <Container className='' id='container1'>
+      <Container className='' id='container2'>
+        <Row className='justify-content-center my-5'>
+          <h1>Login</h1>
+          <Col xs={12} md={8} lg={6}>
+            <Form onSubmit={handleSubmit}>
+              <Form.Group className="mb-3">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="text" placeholder="Enter email" name='email' required onChange={handleChangeFormData} />
+              </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Password" name='password' required onChange={handleChangeFormData} />
+              </Form.Group>
+              <Col className='text-danger my-3'>
+                <strong>{mensaje}</strong>
+              </Col>
+              <Button variant="primary" type="submit" disabled={isLoading}>
+                {isLoading ? 'Cargando...' : 'Login'}
+              </Button>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
     </Container>
-  </Container>
   )
 };
 
