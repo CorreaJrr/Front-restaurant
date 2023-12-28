@@ -1,37 +1,51 @@
 #container1 {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('https://viajes.nationalgeographic.com.es/medio/2022/12/16/asado_5eb4cdad_1200x799.jpg'); 
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #container2 {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3); 
-  }
-  
-  .form-label {
-    font-weight: bold;
-  }
-  
-  .form-control {
-    margin-bottom: 15px;
-  }
-  
-  .text-danger {
-    font-size: 14px;
-    font-weight: bold;
-  }
-  
-  .btn-primary {
-    width: 100%;
-    padding: 10px;
-    font-weight: bold;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('https://viajes.nationalgeographic.com.es/medio/2022/12/16/asado_5eb4cdad_1200x799.jpg');
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#container2 {
+  background-color: rgba(255, 255, 255, 0.479);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-label {
+  font-weight: bold;
+  color: #2606dd; /* Color del texto */
+}
+
+.form-control {
+  margin-bottom: 15px;
+}
+
+.text-danger {
+  font-size: 14px;
+  font-weight: bold;
+  color: red; /* Color del texto de error */
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #007bff; /* Color de fondo del botón */
+  border: none;
+  color: #fff; /* Color del texto del botón */
+}
+
+.btn-primary:hover {
+  background-color: #b3007d; /* Cambio de color al pasar el ratón por encima */
+}
