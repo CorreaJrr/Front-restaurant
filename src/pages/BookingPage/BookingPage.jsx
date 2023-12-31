@@ -9,17 +9,17 @@ import { alertGeneric } from "../../utils/alertMajor";
 import '../BookingPage/snowEffect.css'
 
 
-
 const BookingPage = () => {
   const [BookingData, setBookingData] = useState({
     day: Number,
     hour: Number,
     month: Number,
+    year: Number,
     guests: Number,
   });
   const [mensajes, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage('');
@@ -115,6 +115,10 @@ const BookingPage = () => {
             <Form.Group className="mb-3" >
               <Form.Label>Month</Form.Label>
               <Form.Control type="number" placeholder="Enter the Month" name='month' min='1' max='12' required onChange={handleChangeBookingData}/>
+            </Form.Group>
+            <Form.Group className="mb-3" >
+              <Form.Label>Year</Form.Label>
+              <Form.Control type="number" placeholder="Enter the Year" name='year' min={calendar.getFullYear()} max={calendar.getFullYear() + 1} required onChange={handleChangeBookingData}/>
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Guests</Form.Label>
