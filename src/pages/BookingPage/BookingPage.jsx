@@ -5,7 +5,7 @@ import { useState } from 'react';
 import calendar from '../../utils/valiDate';
 import axios from 'axios';
 import { alertGeneric } from "../../utils/alertMajor";
-
+const URL_BASE = import.meta.env.VITE_URL_BASE
 import '../BookingPage/snowEffect.css'
 
 
@@ -24,8 +24,8 @@ const BookingPage = () => {
     e.preventDefault();
     setMessage('');
     try {
+      const { data } = await axios.get(`${URL_BASE}/bookings`)
       /* Cuando este el deploy del backend, editar la URL y descomentar!
-      const { data } = await axios.get(`${URL_BASE}/bookings/`)
       data.map((booking) => {
         if (BookingData === booking)
         return alertGeneric(mensajes.serverErrorGeneric, 'Ya hay una reserva tomada para ese momento', 'error')
@@ -44,14 +44,14 @@ const BookingPage = () => {
         if (30 < BookingData.day) {
           return alertGeneric(mensajes.serverErrorGeneric, 'Como que no existe la fecha', 'error')
         } else {
-          /* Cuando este el deploy del backend, editar la URL y descomentar!
           await axios.post(`${URL_BASE}/bookings/create`, BookingData)
+          /* Cuando este el deploy del backend, editar la URL y descomentar!
           */
           return alertGeneric(mensajes.bookingSuccess, 'Reserva realizada con exito', 'success')
         }
       }
-      /*  Cuando este el deploy del backend, editar la URL y descomentar!
       await axios.post(`${URL_BASE}/bookings/create`, BookingData)
+      /*  Cuando este el deploy del backend, editar la URL y descomentar!
       */
       return alertGeneric(mensajes.bookingSuccess, 'Reserva realizada con exito', 'success')
     } catch (error) {
