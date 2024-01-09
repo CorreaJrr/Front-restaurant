@@ -28,8 +28,8 @@ const Login = () => {
     }
 
     // Validación de longitud de la contraseña
-    if (formData.password.length < 8 || formData.password.length > 20) {
-      setMensaje('La contraseña debe tener entre 8 y 20 caracteres.');
+    if (formData.password.length < 8 || formData.password.length > 10) {
+      setMensaje('La contraseña debe tener entre 8 y 10 caracteres.');
       return;
     }
 

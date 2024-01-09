@@ -18,9 +18,10 @@ const Register = () => {
     passwordCheck: '',
     termsAndConditions: false,
     date: new Date(),
+    birthYear: '',
   });
   const [mensaje, setMensaje] = useState('');
-  const [termsAccepted, setTermsAccepted] = useState(false); // Estado para controlar la aceptación de términos
+  const [termsAccepted, setTermsAccepted] = useState(false);
 
   const handleFormDataChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -41,12 +42,19 @@ const Register = () => {
     const validationEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     const validationPass = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{8,10}$/;
 
-    if (!validationEmail.test(formData.email)) return alertGeneric(mensajes.failEmailFormat,'Uppss..', 'error');
-    if (formData.password !== formData.passwordCheck) return alertGeneric(mensajes.failPasswordCheck,'Uppss..', 'error');
-    if (!validationPass.test(formData.password)) return alertGeneric(mensajes.failPasswordFormat,'Uppss..', 'error');
+    if (!validationEmail.test(formData.email)) return alertGeneric(mensajes.failEmailFormat, 'Uppss..', 'error');
+    if (formData.password !== formData.passwordCheck) return alertGeneric(mensajes.failPasswordCheck, 'Uppss..', 'error');
+    if (!validationPass.test(formData.password)) return alertGeneric(mensajes.failPasswordFormat, 'Uppss..', 'error');
 
-    if (!termsAccepted) { // Validación de términos y condiciones
+    if (!termsAccepted) { 
       setMensaje('Debes aceptar los términos y condiciones.');
+      return;
+    }
+    const currentYear = new Date().getFullYear();
+    const birthYear = parseInt(formData.birthYear, 10);
+
+    if (birthYear > currentYear - 16 || birthYear < currentYear - 99 || isNaN(birthYear)) {
+      setMensaje('Debes tener entre 16 y 99 años para registrarte.');
       return;
     }
 
@@ -72,43 +80,37 @@ const Register = () => {
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="text" placeholder="Enter email" required name='email' onChange={handleFormDataChange}/>
+              <Form.Control type="text" placeholder="Enter email" required name='email' onChange={handleFormDataChange} />
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter name" minLength={3} maxLength={10} required name='name' onChange={handleFormDataChange}/>
+              <Form.Control type="text" placeholder="Enter name" minLength={3} maxLength={15} required name='name' onChange={handleFormDataChange} />
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Lastname</Form.Label>
-              <Form.Control type="text" placeholder="Enter lastname" minLength={3} maxLength={15} required name='lastName' onChange={handleFormDataChange}/>
+              <Form.Control type="text" placeholder="Enter lastname" minLength={3} maxLength={15} required name='lastName' onChange={handleFormDataChange} />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>Year of Birth</Form.Label>
+              <Form.Control
+              type="number"placeholder="Enter your birth year"min={new Date().getFullYear() - 99} max={new Date().getFullYear() - 16} required name='birthYear'onChange={handleFormDataChange}/>
+              {mensaje && <p style={{ color: 'red' }}>{mensaje}</p>}
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder="Password"
-                required
-                minLength={8}
-                maxLength={10}
-                name='password'
-                onChange={handleFormDataChange}
-              />
+              <Form.Control type="password"
+                placeholder="Password" required minLength={8} maxLength={10} name='password'onChange={handleFormDataChange}/>
               <small id="password-help" style={{ color: 'red', fontSize: '1em' }} className="bold-text">
                 Debe contener entre 8 y 10 caracteres, incluyendo al menos 1 mayúscula y 1 número
               </small>
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Repeat password</Form.Label>
-              <Form.Control type="password" placeholder="Repeat password" required minLength={8} maxLength={10} name='passwordCheck' onChange={handleFormDataChange}/>
+              <Form.Control type="password" placeholder="Repeat password" required minLength={8} maxLength={10} name='passwordCheck' onChange={handleFormDataChange} />
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Check
-                type="checkbox"
-                label="Accept terms and conditions"
-                required
-                name='termsAndConditions'
-                onChange={handleFormDataChange}
-              />
+              type="checkbox"label="Accept terms and conditions"required name='termsAndConditions'onChange={handleFormDataChange}/>
               {mensaje && <div className='text-danger'>{mensaje}</div>}
             </Form.Group>
             <Button variant="primary" type="submit">
