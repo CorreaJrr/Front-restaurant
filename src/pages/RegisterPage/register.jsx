@@ -18,7 +18,7 @@ const Register = () => {
     passwordCheck: '',
     termsAndConditions: false,
     date: new Date(),
-    birthYear: '',
+    yearofbirth: '',
   });
   const [mensaje, setMensaje] = useState('');
   const [termsAccepted, setTermsAccepted] = useState(false);
@@ -51,18 +51,18 @@ const Register = () => {
       return;
     }
     const currentYear = new Date().getFullYear();
-    const birthYear = parseInt(formData.birthYear, 10);
+    const yearofbirth = parseInt(formData.yearofbirth, 10);
 
-    if (birthYear > currentYear - 16 || birthYear < currentYear - 99 || isNaN(birthYear)) {
-      setMensaje('Debes tener entre 16 y 99 años para registrarte.');
+    if (yearofbirth > currentYear - 16 || yearofbirth < currentYear - 100 || isNaN(yearofbirth)) {
+      setMensaje('Debes tener entre 16 y 100 años para registrarte.');
       return;
     }
 
     try {
       setIsLoading(true);
-      const { data } = await axios.get(`${endPoints.user}/?email=${formData.email}`);
+      //const { data } = await axios.get(`${endPoints.user}/?email=${formData.email}`);
       
-      if (data.length !== 0) return alertGeneric(mensajes.userAlreadyExist, 'Uppss...', 'error');
+      //if (data.length !== 0) return alertGeneric(mensajes.userAlreadyExist, 'Uppss...', 'error');
       
       await axios.post(endPoints.user, formData);
       alertGeneric(mensajes.registerSuccess, 'Exito', 'success', () => navigate('/login'));
@@ -93,7 +93,7 @@ const Register = () => {
             <Form.Group className="mb-3">
               <Form.Label>Year of Birth</Form.Label>
               <Form.Control
-              type="number"placeholder="Enter your birth year"min={new Date().getFullYear() - 99} max={new Date().getFullYear() - 16} required name='birthYear'onChange={handleFormDataChange}/>
+              type="number"placeholder="Enter your birth year"min={new Date().getFullYear() - 100} max={new Date().getFullYear() - 16} required name='yearofbirth'onChange={handleFormDataChange}/>
               {mensaje && <p style={{ color: 'red' }}>{mensaje}</p>}
             </Form.Group>
             <Form.Group className="mb-3">

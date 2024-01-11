@@ -1,3 +1,3 @@
 export const endPoints = {
-    user: 'http://localhost:3000/users',
+    user: 'https://deploy-back-hoxv.onrender.com/api/users/create',
   };
