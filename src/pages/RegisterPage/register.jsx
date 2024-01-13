@@ -60,6 +60,10 @@ const Register = () => {
 
     try {
       setIsLoading(true);
+
+
+      // Hay que checkear el endpoint de esto, @Flavio //
+      
       //const { data } = await axios.get(`${endPoints.user}/?email=${formData.email}`);
       
       //if (data.length !== 0) return alertGeneric(mensajes.userAlreadyExist, 'Uppss...', 'error');

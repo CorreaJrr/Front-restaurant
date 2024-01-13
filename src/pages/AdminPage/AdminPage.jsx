@@ -95,7 +95,7 @@ const AdminPage = () => {
               <Table striped bordered hover variant='dark' className='my-4'>
                 <thead>
                   <tr>
-                    <th className='text-center'>ID</th>
+                    <th className='text-center'>Avatar</th>
                     <th className='text-center'>Name</th>
                     <th className='text-center'>Last Name</th>
                     <th className='text-center'>Email</th>
@@ -104,10 +104,10 @@ const AdminPage = () => {
                   </tr>
                 </thead>
                 <tbody>
-                      {console.log(users) && users &&
+                      {users &&
                         users.map((user, index) => (
                           <tr key={index}>
-                            <td className='text-center'>{user.id}</td>
+                            <td className='text-center'><img src={user.avatar} width='50px' height='50px'></img></td>
                             <td className='text-center'>{user.name}</td>
                             <td className='text-center'>{user.lastName}</td>
                             <td className='text-center'>{user.email}</td>
@@ -174,6 +174,20 @@ const AdminPage = () => {
                     setSelectedUser({
                       ...selectedUser,
                       email: e.target.value,
+                    })
+                  }
+                />
+              </Form.Group>
+              <Form.Group controlId="formAvatar">
+                <Form.Label>Avatar</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Ingrese la URL de una imagen"
+                  value={selectedUser ? selectedUser.avatar : ''}
+                  onChange={(e) =>
+                    setSelectedUser({
+                      ...selectedUser,
+                      avatar: e.target.value,
                     })
                   }
                 />
