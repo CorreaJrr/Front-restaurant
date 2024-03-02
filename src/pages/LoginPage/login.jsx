@@ -35,11 +35,12 @@ const Login = () => {
 
     try {
       setIsLoading(true);
+      /*const { datauser } = await axios.get(`${URL_BASE}/users/byId/:`)*/
       const { data } = await axios.post(`${URL_BASE}/login`, formData);
 
       if (typeof data === 'string') return alertGeneric(data, 'Uppss...', 'error');
 
-      localStorage.setItem('userLog', JSON.stringify(data));
+      localStorage.setItem('userLog', JSON.stringify(data))
 
       alertGeneric(mensajes.loginSuccess, 'Genial', 'success', () => navigate('/'));
 

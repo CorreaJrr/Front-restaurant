@@ -10,4 +10,5 @@ export const mensajes = {
     userAlreadyExist: 'Ya esta registrado el email capo, proba con otro',
     emailOrPasswordBad: 'Tus papas son primos? El usuario o la contraseña son incorrectos.',
     serverErrorGeneric: 'Se rompio algo. habla con el  admin.',
+    bookingFailure: 'Para reservar debes iniciar sesion.',
   };

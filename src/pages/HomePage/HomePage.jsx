@@ -2,8 +2,27 @@ import { Navbar, Container, Nav, Row, Col, Image } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../HomePage/homePage.css';
+import { alertGeneric } from '../../utils/alertMajor';
+import { mensajes } from '../../utils/messages';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 const Homepage = () => {
+  const navigate = useNavigate()
+  const user = JSON.parse(localStorage.getItem('userLog'))
+
+  const handleReserve = async (e) => {
+    try {
+      if(user == null) {
+        alertGeneric(mensajes.bookingFailure, 'Uppss...', 'error', () => navigate('/login'))
+      }
+    } catch (error) {
+      alertGeneric(mensajes.serverErrorGeneric, 'Uppss...', 'error')
+    }
+  }
+
+
   return (
     <div className='app'>
         <main className=' container-fluid'>
@@ -103,7 +122,7 @@ const Homepage = () => {
                   </p>
                   {/* cambiar color del boton */}
                   <div className='divB pb-3'>
-                    <Button className='botoN  mb-2 text-dark' variant="primary">Reservar Ahora</Button>
+                    <Button className='botoN  mb-2 text-dark' variant="primary" onClick={handleReserve}> <Link to='/booking'>Reservar Ahora</Link></Button>
                   </div>
                 </Col>
                 <Col className=' mt-1' sm={6} >
