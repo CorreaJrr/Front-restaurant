@@ -15,6 +15,7 @@ import Register from './pages/RegisterPage/register.jsx';
 import HomePage from './pages/HomePage/HomePage.jsx';
 import Galeria from './components/Image_Gallery/Galeria.jsx';
 import Error404Page from './pages/Error404Page/Error404Page.jsx';
+import EditUserPage from './pages/EditUserPage/EditUserPage.jsx';
 
 
 
@@ -32,6 +33,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='/gallery' element={<Galeria />}/>
       <Route path='?' element={<Error404Page/>}/>
       <Route path='/404' element={<Error404Page/>}/>
+      <Route path='/edituser' element={<EditUserPage/>}/>
 
     </Routes>
     <Footer/>
