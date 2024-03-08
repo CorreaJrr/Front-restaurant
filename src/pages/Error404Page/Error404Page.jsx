@@ -8,7 +8,7 @@ function Error404Page() {
         <div className='error'>
           <div className='texto'>
             <h1>¡Ups! <br /> 
-            La pagina que busca no esta disponible</h1>
+            Page not Found</h1>
             <h1> Volver</h1>
           </div>
         </div>

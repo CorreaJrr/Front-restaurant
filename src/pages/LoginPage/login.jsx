@@ -4,6 +4,7 @@ import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { mensajes } from '../../utils/messages';
 import { alertGeneric } from '../../utils/alertMajor';
 import axios from 'axios';
+import clientAxios from '../../utils/clientAxios';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -40,7 +41,8 @@ const Login = () => {
 
       if (typeof data === 'string') return alertGeneric(data, 'Uppss...', 'error');
 
-      localStorage.setItem('userLog', JSON.stringify(data))
+      localStorage.setItem('userID', (data.userID))
+      localStorage.setItem('token', (data.token))
 
       alertGeneric(mensajes.loginSuccess, 'Genial', 'success', () => navigate('/'));
 
