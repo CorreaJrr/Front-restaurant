@@ -1,4 +1,5 @@
 import axios from 'axios';
+import clientAxios from '../../utils/clientAxios.js';
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Table, Button, Modal, Form } from 'react-bootstrap';
 import { alertGeneric } from '../../utils/alertMajor';
@@ -18,10 +19,10 @@ const AdminPage = () => {
  const getAllUsers = async() => {
     try {
       setIsLoading(true);
-      const { data } = await axios.get(`${URL_BASE}/users`);
+      const { data } = await clientAxios.get(`/users`);
       setUsers(data);
     } catch (error) {
-      alertGeneric(messages.genericGetError, 'Uppss...', 'error');
+      alertGeneric(mensajes.genericGetError, 'Uppss...', 'error');
     } finally {
       setIsLoading(false);
     }
@@ -31,12 +32,11 @@ const AdminPage = () => {
     setSelectedUser(user);
     setShowEditModal(true);
   };
-
   const handleSaveEdit = async() => {
     setShowEditModal(false);
     try {
       setIsLoading(true);
-      await axios.patch(`${URL_BASE}/users/edit/${selectedUser._id}`, selectedUser);
+      await clientAxios.patch(`/users/edit/${selectedUser._id}`, selectedUser);
       setChangeFlag(!changeFlag);
     } catch (error) {
       alertGeneric(mensajes.genericErrorPost, 'Uppss...', 'error');
@@ -59,7 +59,7 @@ const AdminPage = () => {
     try {
       if (confirm('Este paso no es reversible. estas seguro?')) {
         setIsLoading(true);
-        await axios.delete(`${URL_BASE}/users/delete/${id}`);
+        await clientAxios.delete(`/users/delete/${id}`);
       } else {
         return;
       }
@@ -75,7 +75,7 @@ const AdminPage = () => {
     setShowEditModal(false);
     try {
       setIsLoading(true);
-      await axios.patch(`${URL_BASE}/users/edit/${user._id}`, {...user, disabled: !e.target.checked});
+      await clientAxios.patch(`/users/edit/${user._id}`, {...user, disabled: !e.target.checked});
       setChangeFlag(!changeFlag);
     } catch (error) {
       alertGeneric(mensajes.genericErrorPost, 'Uppss...', 'error');

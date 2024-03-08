@@ -10,8 +10,7 @@ import { Link } from 'react-router-dom';
 
 const Homepage = () => {
   const navigate = useNavigate()
-  const user = JSON.parse(localStorage.getItem('userLog'))
-
+  const user = localStorage.getItem('token')
   const handleReserve = async (e) => {
     try {
       if(user == null) {
