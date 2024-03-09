@@ -1,15 +1,21 @@
 import './RegisterStyles.css';
 import React, { useState } from 'react';
-import { Col, Container, Form, Button } from 'react-bootstrap';
+import { Col, Container, Form, Button, Modal } from 'react-bootstrap';
 import { mensajes } from '../../utils/messages';
 import { alertGeneric } from '../../utils/alertMajor';
 import { endPoints } from '../../utils/endPoints';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+
+
 const Register = () => {
-  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  const user = localStorage.getItem('token')
+  if (user !== null) {
+    return alertGeneric('Debe cerrar sesion para continuar' ,'Error', 'info', () => navigate('/edituser'))
+  }
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
     name: '',
@@ -36,6 +42,22 @@ const Register = () => {
       date: new Date(),
     }));
   };
+
+  const handleReturn = () => navigate('/')
+
+  const handleEditClose = async() => {
+    try {
+        setIsLoading(true);
+        localStorage.removeItem('token');
+        localStorage.removeItem('userID');
+        navigate('/')
+      setChangeFlag(!changeFlag);
+    } catch (error) {
+      alertGeneric(mensajes.genericErrorPost, 'Uppss...', 'error');
+    } finally {
+      setIsLoading(false);
+    }
+  }     
 
   const handleSubmit = async (e) => {
     e.preventDefault();

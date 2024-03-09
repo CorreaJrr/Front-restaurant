@@ -6,12 +6,15 @@ import { mensajes } from '../../utils/messages';
 import LoadingScreen from '../../components/LoadingScreen/LoadingScreen.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import clientAxios from '../../utils/clientAxios.js';
+import { useNavigate } from 'react-router-dom';
+
 
 const EditUserPage = () => {
     const userID = localStorage.getItem('userID')
     const [usuario, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(false);
     const URL_BASE = import.meta.env.VITE_URL_BASE;
+    const navigate = useNavigate()
     const [showEditModal, setShowEditModal] = useState(false);
     const [selectedUser, setSelectedUser] = useState(null);
     const [changeFlag, setChangeFlag] = useState(false);
@@ -55,11 +58,13 @@ const EditUserPage = () => {
         getUser();
       }, [changeFlag]);
     
-      const deleteUser = async(id) => {
+      const closeSession = async() => {
         try {
-          if (confirm('Este paso no es reversible. estas seguro?')) {
+          if (confirm('Quieres cerrar sesion?')) {
             setIsLoading(true);
-            await clientAxios.delete(`/users/delete/${id}`);
+            localStorage.removeItem('token');
+            localStorage.removeItem('userID');
+            navigate('/')
           } else {
             return;
           }
@@ -115,7 +120,7 @@ const EditUserPage = () => {
                                 </td>
                                 <td className='text-center'>
                                   <Col className='d-flex justify-content-center'>
-                                    <Button className='btn-sm btn-danger mx-2' onClick={() => deleteUser(usuario._id)}>Delete</Button>
+                                    <Button className='btn-sm btn-danger mx-2' onClick={() => closeSession()}>Close Session</Button>
                                     <Button className='btn-sm' variant="success" onClick={() => handleEdit(usuario)}>
                                       Edit
                                     </Button>
