@@ -6,6 +6,7 @@ import calendar from '../../utils/valiDate';
 import axios from 'axios';
 import { alertGeneric } from "../../utils/alertMajor";
 const URL_BASE = import.meta.env.VITE_URL_BASE
+import clientAxios from '../../utils/clientAxios.js'
 import '../BookingPage/snowEffect.css'
 
 
@@ -24,7 +25,7 @@ const BookingPage = () => {
     e.preventDefault();
     setMessage('');
     try {
-      const { data } = await axios.get(`${URL_BASE}/bookings`)
+      //const { data } = await clientAxiosaxios.get(`/bookings`)
       /* Cuando este el deploy del backend, editar la URL y descomentar!
       data.map((booking) => {
         if (BookingData === booking)
@@ -44,13 +45,13 @@ const BookingPage = () => {
         if (30 < BookingData.day) {
           return alertGeneric(mensajes.serverErrorGeneric, 'Como que no existe la fecha', 'error')
         } else {
-          await axios.post(`${URL_BASE}/bookings/create`, BookingData)
+          await clientAxios.post(`/bookings/create`, BookingData)
           /* Cuando este el deploy del backend, editar la URL y descomentar!
           */
           return alertGeneric(mensajes.bookingSuccess, 'Reserva realizada con exito', 'success')
         }
       }
-      await axios.post(`${URL_BASE}/bookings/create`, BookingData)
+      await clientAxios.post(`/bookings/create`, BookingData)
       /*  Cuando este el deploy del backend, editar la URL y descomentar!
       */
       return alertGeneric(mensajes.bookingSuccess, 'Reserva realizada con exito', 'success')
