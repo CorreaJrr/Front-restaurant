@@ -1,6 +1,10 @@
 export const mensajes = {
+<<<<<<< Updated upstream
     genericErrorPost:'A ocurrido un error al procesar tus datos intenta otra vez',
     genericErrorPatch:'Algun dato que estas intentando modificar ya paso',
+=======
+    checkRegisterBooking:'Para realizar la reserva debes estar registrado',
+>>>>>>> Stashed changes
     bookingSuccess: 'Tu Reserva fue añadida correctamente',
     registerSuccess: 'Bien Maester te registrate correctamente',
     loginSuccess: 'Ingreso el genio del futbol mundial',

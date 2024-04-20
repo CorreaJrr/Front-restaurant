@@ -1,0 +1,46 @@
+.spinnerContainer {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 90vh;
+}
+
+ .spinner {
+   width: 300px;
+   height: 300px;
+   animation: spin 3s linear infinite;
+ }
+ 
+ @keyframes spin {
+   0%{
+     transform: rotate(0deg);
+   }
+   100%{
+     transform: rotate(360deg);
+   }
+ }
+
+/* .spinnerContainer {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 90vh;
+}
+
+
+.logo{
+    animation: animName 2s linear infinite;
+    width:50px;
+    height:50px;
+    background:#0091EA;
+    margin:20px;
+  }
+  
+@keyframes animName {
+   0%{
+      transform: rotate(0deg);
+     }
+  100%{
+      transform: rotate(360deg);
+     }
+  } */

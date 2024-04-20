@@ -10,12 +10,15 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Register = () => {
+<<<<<<< Updated upstream
   const navigate = useNavigate();
   const user = localStorage.getItem('token')
   if (user !== null) {
     return alertGeneric('Debe cerrar sesion para continuar' ,'Error', 'info', () => navigate('/edituser'))
   }
   const [isLoading, setIsLoading] = useState(false);
+=======
+>>>>>>> Stashed changes
   const [formData, setFormData] = useState({
     email: '',
     name: '',
@@ -26,6 +29,9 @@ const Register = () => {
     date: new Date(),
     yearofbirth: '',
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const URL_BASE = import.meta.env.VITE_URL_BASE;
+  const navigate = useNavigate();
   const [mensaje, setMensaje] = useState('');
   const [termsAccepted, setTermsAccepted] = useState(false);
 
@@ -86,10 +92,16 @@ const Register = () => {
 
       // Hay que checkear el endpoint de esto, @Flavio //
       
-      //const { data } = await axios.get(`${endPoints.user}/?email=${formData.email}`);
+      const { data } = await axios.get(`${URL_BASE}/users/checkEmailExist/?email=${formData.email}`);
       
+<<<<<<< Updated upstream
       //if (data.length !== 0) return alertGeneric(mensajes.userAlreadyExist, 'Uppss...', 'error');
       await axios.post(endPoints.user, formData);
+=======
+      if (data) return alertGeneric(mensajes.userAlreadyExist, 'Uppss...', 'error');
+      
+      await axios.post(`${URL_BASE}/users/create`, formData);
+>>>>>>> Stashed changes
       alertGeneric(mensajes.registerSuccess, 'Exito', 'success', () => navigate('/login'));
     } catch (error) {
       alertGeneric(mensajes.genericErrorPost, 'Uppss...', 'error');
