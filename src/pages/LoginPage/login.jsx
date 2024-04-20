@@ -41,14 +41,8 @@ const Login = () => {
 
       if (typeof data === 'string') return alertGeneric(data, 'Uppss...', 'error');
 
-<<<<<<< Updated upstream
       localStorage.setItem('userID', (data.userID))
       localStorage.setItem('token', (data.token))
-=======
-      localStorage.setItem('userLog', JSON.stringify(data));
-      localStorage.setItem('token', data.token);
-      
->>>>>>> Stashed changes
 
       alertGeneric(mensajes.loginSuccess, 'Genial', 'success', () => navigate('/'));
 

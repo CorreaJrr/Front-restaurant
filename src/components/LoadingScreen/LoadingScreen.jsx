@@ -5,7 +5,6 @@ import {spinnerContainer, spinner} from './loadingScreen.module.css'
 
 const LoadingScreen = () => {
   return (
-<<<<<<< Updated upstream
     <div className='divContainer'>
       <div className='containerLoader'>
         <div className='loader'>
@@ -15,12 +14,6 @@ const LoadingScreen = () => {
       </div>
 
     </div>
-=======
-    <Col className={spinnerContainer}>
-      <img className={spinner} src={logoCargando} alt="spinner" />
-    </Col>
-    
->>>>>>> Stashed changes
   )
 }
 

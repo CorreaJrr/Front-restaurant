@@ -26,10 +26,7 @@ const BookingPage = () => {
     e.preventDefault();
     setMessage('');
     try {
-<<<<<<< Updated upstream
       //const { data } = await clientAxiosaxios.get(`/bookings`)
-=======
->>>>>>> Stashed changes
       /* Cuando este el deploy del backend, editar la URL y descomentar!
       data.map((booking) => {
         if (BookingData === booking)
@@ -48,7 +45,6 @@ const BookingPage = () => {
       if (BookingData.month == 4 || BookingData.month == 6 || BookingData.month == 9 || BookingData.month == 11) {
         if (30 < BookingData.day) {
           return alertGeneric(mensajes.serverErrorGeneric, 'Como que no existe la fecha', 'error')
-<<<<<<< Updated upstream
         } else {
           // await clientAxios.post(`/bookings/create`, BookingData)
           // /* Cuando este el deploy del backend, editar la URL y descomentar!
@@ -62,19 +58,6 @@ const BookingPage = () => {
       /*  Cuando este el deploy del backend, editar la URL y descomentar!
       */
       return alertGeneric(mensajes.bookingSuccess, 'Reserva realizada con exito', 'success');
-=======
-        }
-      } 
-        
-      const { data } = await axios.get(`${URL_BASE}/bookings/checkEmailExist/?email=${BookingData.email}`);
-      if(!data) return alertGeneric(mensajes.checkRegisterBooking, 'Para realizar la reserva debes estar registrado', 'error')
-       await clientAxios.post(`/bookings/create`, BookingData)
-      /*  Cuando este el deploy del backend, editar la URL y descomentar!
-      */
-      return alertGeneric(mensajes.bookingSuccess, 'Reserva realizada con exito', 'success')
-      
-    
->>>>>>> Stashed changes
     } catch (error) {
       alertGeneric(mensajes.serverErrorGeneric, 'Ocurrio un error al procesar la solicitud', 'error')
     } finally {
@@ -127,13 +110,8 @@ const BookingPage = () => {
         <Col xs={12} md={8} lg={6}>
           <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" >
-<<<<<<< Updated upstream
               <Form.Label>Email adress</Form.Label>
               <Form.Control type="email" placeholder="Enter email adress"  name='email' required onChange={handleChangeBookingData}/>
-=======
-              <Form.Label>Email </Form.Label>
-              <Form.Control type="email" placeholder="Email adress"  name="email" required onChange={handleChangeBookingData}/>
->>>>>>> Stashed changes
             </Form.Group>
             <Form.Group className="mb-3" >
               <Form.Label>Day</Form.Label>
