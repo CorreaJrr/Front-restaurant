@@ -163,7 +163,7 @@ function Galeria() {
 	{/* comnienzo de las tarjetas de merienda */}
 
 	<div class="container-gral">
-				<h1 class="title">Meriendas y cenas</h1>
+				<h1 class="title">Desayunos y meriendas</h1>
 				<div class="container-card">
 					<div class="card-Desayuno">
 						<div class="card">

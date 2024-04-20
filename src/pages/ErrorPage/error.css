@@ -1,0 +1,43 @@
+  .containerError {
+    padding: 0px;
+    margin: 0px;
+    background-image: url("../../assets/images/comidaitaliana.jpeg");
+    background-repeat: no-repeat;
+    background-size: 120% 120%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+   .error {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+    /* padding: 0px;
+    margin-top: 0px; */
+    /* background-image: url("../../assets/images/comidaitaliana.jpeg"); */
+    /* background-size: 400%; */
+    background-repeat: no-repeat;
+    width: 70%;
+    height: 70%;
+    /* border-radius: 25px; */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    min-width: 250px;
+  }
+
+  .containerTexto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .texto {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 50px;
+  } 

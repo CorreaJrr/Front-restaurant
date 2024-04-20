@@ -14,7 +14,7 @@ import Login from './pages/LoginPage/login.jsx';
 import Register from './pages/RegisterPage/register.jsx';
 import HomePage from './pages/HomePage/HomePage.jsx';
 import Galeria from './components/Image_Gallery/Galeria.jsx';
-import Error404Page from './pages/Error404Page/Error404Page.jsx';
+import Error404Page from './pages/ErrorPage/Error404Page.jsx';
 import EditUserPage from './pages/EditUserPage/EditUserPage.jsx';
 import ErrorLogPage from './pages/ErrorLogPage/ErrorLogPage.jsx';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen.jsx';
@@ -42,6 +42,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
     </Routes>
     <Footer/>
-    </BrowserRouter>
+    </BrowserRouter>  
   </React.StrictMode>,
 )

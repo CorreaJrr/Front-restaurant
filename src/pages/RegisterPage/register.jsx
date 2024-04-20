@@ -89,7 +89,6 @@ const Register = () => {
       //const { data } = await axios.get(`${endPoints.user}/?email=${formData.email}`);
       
       //if (data.length !== 0) return alertGeneric(mensajes.userAlreadyExist, 'Uppss...', 'error');
-      
       await axios.post(endPoints.user, formData);
       alertGeneric(mensajes.registerSuccess, 'Exito', 'success', () => navigate('/login'));
     } catch (error) {

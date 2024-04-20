@@ -1,4 +1,6 @@
 export const mensajes = {
+    genericErrorPost:'A ocurrido un error al procesar tus datos intenta otra vez',
+    genericErrorPatch:'Algun dato que estas intentando modificar ya paso',
     bookingSuccess: 'Tu Reserva fue añadida correctamente',
     registerSuccess: 'Bien Maester te registrate correctamente',
     loginSuccess: 'Ingreso el genio del futbol mundial',

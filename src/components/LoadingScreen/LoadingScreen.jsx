@@ -3,8 +3,14 @@ import '../LoadingScreen/LoadingScreen.css';
 
 const LoadingScreen = () => {
   return (
-    <div id="logo" className='d-flex justify-content-center'>        
-      <img src="../../images/Logo-Sabor-Argentino.png" alt="" />
+    <div className='divContainer'>
+      <div className='containerLoader'>
+        <div className='loader'>
+
+        </div>
+        <p className='message'>Loading...</p>
+      </div>
+
     </div>
   )
 }
