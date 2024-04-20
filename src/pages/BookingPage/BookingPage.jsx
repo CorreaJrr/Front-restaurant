@@ -8,7 +8,7 @@ import { alertGeneric } from "../../utils/alertMajor";
 const URL_BASE = import.meta.env.VITE_URL_BASE
 import clientAxios from '../../utils/clientAxios.js'
 import '../BookingPage/snowEffect.css'
-import clientAxios from '../../utils/clientAxios';
+
 
 const BookingPage = () => {
   const [BookingData, setBookingData] = useState({
