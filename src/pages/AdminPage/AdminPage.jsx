@@ -5,6 +5,7 @@ import { alertGeneric } from '../../utils/alertMajor';
 import { mensajes } from '../../utils/messages';
 import LoadingScreen from '../../components/LoadingScreen/LoadingScreen.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../AdminPage/AdminPage.css';
 
 
 const AdminPage = () => {
@@ -68,6 +69,7 @@ const AdminPage = () => {
       alertGeneric(mensajes.genericErrorPost, 'Uppss...', 'error');
     } finally {
       setIsLoading(false);
+      getAllUsers();
     }
   };
 
