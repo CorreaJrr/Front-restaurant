@@ -52,8 +52,11 @@ const BookingPage = () => {
           // return alertGeneric(mensajes.bookingSuccess, 'Reserva realizada con exito', 'success')
         }
       }
-      const { data } = await clientAxios.get(`/bookings/checkEmailExist/?email=${BookingData.email}`)
-      if(data) return alertGeneric(mensajes.checkRegisterBooking, 'Para realizar la reserva debes estar registrado', 'error')
+      const { data } = await clientAxios.get(`/users/checkEmailExist/?email=${BookingData.email}`);
+      if(!data) return alertGeneric(mensajes.bookingErrorEmail, 'Para poder realizar la reserva debes estar registrado', 'error', )
+      const emailBooking = await clientAxios.get(`/bookings/checkUserBooking/?email=${BookingData.email}`)
+      console.log(emailBooking.data);
+      if(emailBooking.data) return alertGeneric(mensajes.checkRegisterBooking, 'Solo se permite una reserva por usuario', 'error')
       await clientAxios.post(`/bookings/create`, BookingData)
       /*  Cuando este el deploy del backend, editar la URL y descomentar!
       */
@@ -62,7 +65,6 @@ const BookingPage = () => {
       alertGeneric(mensajes.serverErrorGeneric, 'Ocurrio un error al procesar la solicitud', 'error')
     } finally {
       setIsLoading(false);
-      console.log(BookingData);
     }
   } 
   const handleChangeBookingData = (e) => {

@@ -2,6 +2,7 @@ import React from 'react'
 import { Col } from 'react-bootstrap'
 import logoCargando from '../../assets/logodecarga2.png'
 import {spinnerContainer, spinner} from './loadingScreen.module.css'
+import  './LoadingScreen.css'
 
 const LoadingScreen = () => {
   return (

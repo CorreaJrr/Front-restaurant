@@ -6,6 +6,7 @@ import { alertGeneric } from '../../utils/alertMajor';
 import { endPoints } from '../../utils/endPoints';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import clientAxios from '../../utils/clientAxios';
 
 
 
@@ -87,9 +88,10 @@ const Register = () => {
 
       // Hay que checkear el endpoint de esto, @Flavio //
       
-      const { data } = await axios.get(`${URL_BASE}/users/checkEmailExist/?email=${formData.email}`);
+      const { data } = await clientAxios.get(`/users/checkEmailExist/?email=${formData.email}`);
       
-      //if (data.length !== 0) return alertGeneric(mensajes.userAlreadyExist, 'Uppss...', 'error');
+      if (data) return alertGeneric(mensajes.userAlreadyExist, 'Uppss...', 'error');
+      
       await axios.post(endPoints.user, formData);
       alertGeneric(mensajes.registerSuccess, 'Exito', 'success', () => navigate('/login'));
     } catch (error) {

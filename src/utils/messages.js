@@ -1,4 +1,5 @@
 export const mensajes = {
+    bookingErrorEmail:'Para poder realizar la reserva debes estar registrado',
     genericErrorPost:'A ocurrido un error al procesar tus datos intenta otra vez',
     genericErrorPatch:'Algun dato que estas intentando modificar ya paso',
     bookingSuccess: 'Tu Reserva fue añadida correctamente',
