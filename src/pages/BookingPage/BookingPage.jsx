@@ -6,11 +6,18 @@ import calendar from '../../utils/valiDate';
 import axios from 'axios';
 import { alertGeneric } from "../../utils/alertMajor";
 const URL_BASE = import.meta.env.VITE_URL_BASE
-import clientAxios from '../../utils/clientAxios.js'
-import '../BookingPage/snowEffect.css'
+import clientAxios from '../../utils/clientAxios.js';
+import '../BookingPage/snowEffect.css';
+import { useNavigate } from 'react-router-dom';
+
 
 
 const BookingPage = () => {
+  const navigate = useNavigate()
+  const ExistBooking = localStorage.getItem('UserBooking');
+  if (ExistBooking) {
+    alertGeneric('Puedes cancelar la reserva y luego hacer otra', 'Ya tienes una reserva', 'error', () => navigate('/login'))
+  }
   const [BookingData, setBookingData] = useState({
     email: '',
     day: Number,
@@ -58,6 +65,7 @@ const BookingPage = () => {
       console.log(emailBooking.data);
       if(emailBooking.data) return alertGeneric(mensajes.checkRegisterBooking, 'Solo se permite una reserva por usuario', 'error')
       await clientAxios.post(`/bookings/create`, BookingData)
+      localStorage.setItem('UserBooking', JSON.stringify(BookingData))
       /*  Cuando este el deploy del backend, editar la URL y descomentar!
       */
       return alertGeneric(mensajes.bookingSuccess, 'Reserva realizada con exito', 'success');

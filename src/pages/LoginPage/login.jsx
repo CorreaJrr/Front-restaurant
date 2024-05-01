@@ -43,6 +43,10 @@ const Login = () => {
 
       localStorage.setItem('userID', (data.userID))
       localStorage.setItem('token', (data.token))
+      localStorage.setItem('userAvatar', (data.userAvatar))
+      if (data.userBooking) {
+        localStorage.setItem('UserBooking', (data.userBooking))
+      }
 
       alertGeneric(mensajes.loginSuccess, 'Genial', 'success', () => navigate('/'));
 

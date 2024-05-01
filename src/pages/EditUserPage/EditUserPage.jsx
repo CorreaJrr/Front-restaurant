@@ -64,6 +64,8 @@ const EditUserPage = () => {
             setIsLoading(true);
             localStorage.removeItem('token');
             localStorage.removeItem('userID');
+            localStorage.removeItem('UserBooking');
+            localStorage.removeItem('userAvatar');
             navigate('/')
           } else {
             return;

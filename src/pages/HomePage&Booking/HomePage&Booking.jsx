@@ -1,7 +1,7 @@
 import { Navbar, Container, Nav, Row, Col, Image } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import '../HomePage/homePage.css';
+import '../HomePage&Booking/homePage.css';
 import { alertGeneric } from '../../utils/alertMajor';
 import { mensajes } from '../../utils/messages';
 import { useNavigate } from 'react-router-dom';
@@ -9,14 +9,10 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 
-const Homepage = () => {
+const HomePageB = () => {
   const navigate = useNavigate()
   const user = localStorage.getItem('token');
   const Booking = JSON.parse(localStorage.getItem('UserBooking'))
-  if (Booking){
-    const TBooking = true;
-    return TBooking
-  }
   const handleReserve = async (e) => {
     try {
       if(user == null) {
@@ -32,8 +28,8 @@ const Homepage = () => {
     <div className='app'>
         <main className=' container-fluid'>
           <section className='absolute'>
-            <div>
-              <h1 className='text-white fw-bold'></h1>
+            <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '25vh'}}>
+              <h1 className='text-white fw-bold'>Tienes una reserva para la fecha {Booking.day}/{Booking.month}/{Booking.year} a las {Booking.hour}hs </h1>
             </div> 
             <video muted autoPlay loop>
               <source src='./images/momentos.mp4' />
@@ -144,4 +140,4 @@ const Homepage = () => {
   )
 }
 
-export default Homepage;
+export default HomePageB

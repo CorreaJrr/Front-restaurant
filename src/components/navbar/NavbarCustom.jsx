@@ -5,17 +5,20 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import './NavbarCustom.module.css';
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { alertGeneric } from '../../utils/alertMajor';
 
 
 function NavbarCustom() {
-  const navigate = useNavigate()
+  const userAvt = localStorage.getItem('userAvatar')
   return (
     <Navbar expand="lg" className="bg-body-tertiary ">
       <Container>
         <Navbar.Brand href="#home">
           <Link to="/adminpage">
           <img
-          src="/src/assets/images/Logo-Sabor-Argentino.png"
+          src='/src/assets/images/Logo-Sabor-Argentino.png'
           width="50"
           height="50"
           className="d-inline-block align-top"
@@ -34,7 +37,7 @@ function NavbarCustom() {
           </Link>
           <Link to='/gallery'> 
         <Nav.Link className='navButton text-dark fw-bold' href="#pricing">Galería</Nav.Link>
-          </Link> 
+          </Link>
             <NavDropdown title="Ingresá" id="basic-nav-dropdown">
               <Link to='/login'> 
               <NavDropdown.Item href="#action/3.1">Iniciar sesión</NavDropdown.Item>
@@ -51,6 +54,18 @@ function NavbarCustom() {
               </NavDropdown.Item>
               </Link>
             </NavDropdown>
+            <Link to='/edituser'> 
+        <Nav.Link className='navButton text-dark fw-bold' href="#pricing">Usuario</Nav.Link>
+          </Link>
+          <Link to='/edituser'> 
+        <Nav.Link className='navButton text-dark fw-bold' href="#pricing"><img
+          src={userAvt == null ? "https://i.imgur.com/ThLdImD.png" : `${userAvt}`}
+          width="35"
+          height="35"
+          className="d-inline-block align-top"
+          alt="Logo Sabor Argentino"
+          /></Nav.Link>
+          </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -7,6 +7,7 @@ import './components/navbar/NavbarCustom.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AboutUsPage from './pages/AboutUsPage/AboutUsPage.jsx';
 import BookingPage from './pages/BookingPage/BookingPage.jsx';
+import './pages/HomePage&Booking/homePage.css'
 import './pages/HomePage/homePage.css';
 import AdminPage from './pages/AdminPage/AdminPage.jsx';
 import Footer from './components/Footer/Footer.jsx';
@@ -18,8 +19,10 @@ import Error404Page from './pages/ErrorPage/Error404Page.jsx';
 import EditUserPage from './pages/EditUserPage/EditUserPage.jsx';
 import ErrorLogPage from './pages/ErrorLogPage/ErrorLogPage.jsx';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen.jsx';
+import HomePageB from './pages/HomePage&Booking/HomePage&Booking.jsx';
 
 const userLog = localStorage.getItem('token')
+const userBooking = JSON.parse(localStorage.getItem('UserBooking'))
 
 
 
@@ -28,7 +31,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
     <NavbarCustom />
     <Routes>
-      <Route path='/' element={<HomePage/>}/>
+      <Route path='/' element={userBooking == null ? <HomePage/> : <HomePageB/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
       <Route path='/aboutus' element={<AboutUsPage />}/>
