@@ -1,4 +1,4 @@
-import { Navbar, Container, Nav, Row, Col, Image } from 'react-bootstrap';
+import { Navbar, Container, Nav, Row, Col, Image, } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../HomePage&Booking/homePage.css';
@@ -6,13 +6,15 @@ import { alertGeneric } from '../../utils/alertMajor';
 import { mensajes } from '../../utils/messages';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import clientAxios from '../../utils/clientAxios';
 
 
 const HomePageB = () => {
   const navigate = useNavigate()
   const user = localStorage.getItem('token');
   const Booking = JSON.parse(localStorage.getItem('UserBooking'))
+  const [booking, setBooking] = useState(false)
   const handleReserve = async (e) => {
     try {
       if(user == null) {
@@ -23,6 +25,33 @@ const HomePageB = () => {
     }
   }
 
+  const getBookingByEmail = async () => {
+    try {
+      const {data} = await clientAxios.get(`/bookings/byEmail/?email=${Booking.email}`)
+      setBooking(data);
+    } catch (error) {
+      alertGeneric(mensajes.serverErrorGeneric, 'uppss', 'error')
+    }
+  }
+
+  useEffect(() => {
+    getBookingByEmail();
+  }, [])
+  
+
+  const deleteBooking = async (id) => {
+    try {
+      localStorage.removeItem('UserBooking')
+      if(confirm('Este paso no es reversible, estas seguro?')){
+        await clientAxios.delete(`/bookings/delete/${id}`)
+
+      } else {
+        return
+      }
+    } catch (error) {
+      alertGeneric(mensajes.serverErrorGeneric, 'uppss', 'error')
+    }
+  }
 
   return (
     <div className='app'>
@@ -30,6 +59,10 @@ const HomePageB = () => {
           <section className='absolute'>
             <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '25vh'}}>
               <h1 className='text-white fw-bold'>Tienes una reserva para la fecha {Booking.day}/{Booking.month}/{Booking.year} a las {Booking.hour}hs </h1>
+              <div >
+              <Button className='btn-sm mx-2' variant='danger' onClick={() => deleteBooking(booking._id)}>Eliminar reserva</Button>
+              </div>
+
             </div> 
             <video muted autoPlay loop>
               <source src='./images/momentos.mp4' />
