@@ -41,10 +41,10 @@ const HomePageB = () => {
 
   const deleteBooking = async (id) => {
     try {
-      localStorage.removeItem('UserBooking')
-      if(confirm('Este paso no es reversible, estas seguro?')){
+      if(confirm('Quieres Cancelar la Reserva? Puedes Realizar Otra')){
         await clientAxios.delete(`/bookings/delete/${id}`)
-
+        localStorage.removeItem('UserBooking')
+        
       } else {
         return
       }
@@ -60,7 +60,7 @@ const HomePageB = () => {
             <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '25vh'}}>
               <h1 className='text-white fw-bold'>Tienes una reserva para la fecha {Booking.day}/{Booking.month}/{Booking.year} a las {Booking.hour}hs </h1>
               <div >
-              <Button className='btn-sm mx-2' variant='danger' onClick={() => deleteBooking(booking._id)}>Eliminar reserva</Button>
+              <Button className='btn-sm mx-2' variant='danger' onClick={() => deleteBooking(booking._id)}>¿Cancelar Reserva?</Button>
               </div>
 
             </div> 
