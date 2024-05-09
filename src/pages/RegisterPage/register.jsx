@@ -1,4 +1,4 @@
-import './RegisterStyles.css';
+import './registerStyles.css';
 import React, { useState } from 'react';
 import { Col, Container, Form, Button, Modal } from 'react-bootstrap';
 import { mensajes } from '../../utils/messages';
