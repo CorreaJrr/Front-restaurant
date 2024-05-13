@@ -1,7 +1,9 @@
+import Galeria from "../../components/Image_Gallery/Galeria";
 
 const GalleryPage = () => {
   return (
-    <div>GalleryPage</div>
+    <Galeria/>
+    // <div>GalleryPage</div>
   )
 }
 
