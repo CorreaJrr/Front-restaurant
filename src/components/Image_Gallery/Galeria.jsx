@@ -1,6 +1,8 @@
 import React from 'react';
 import '../Image_Gallery/Galeria.css';
 <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@600&display=swap" rel="stylesheet"></link>
+import entraña from "../../../public/images/entraña.jpeg";
+
 
 function Galeria() {
   return (
@@ -11,7 +13,7 @@ function Galeria() {
       <div className='wrapper'>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\assets\imagenes\port-1.jpeg" alt="" />
+				<img src={entraña} alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
