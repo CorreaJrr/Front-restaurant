@@ -2,6 +2,18 @@ import React from 'react';
 import '../Image_Gallery/Galeria.css';
 <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@600&display=swap" rel="stylesheet"></link>
 import entraña from "../../../public/images/entraña.jpeg";
+import bife from "../../../public/images/bife.jpeg"
+import pizza from "../../../public/images/pizza.jpeg"
+import carne from "../../../public/images/carne-asada.jpeg"
+import tamales from "../../../public/images/tamales.jpeg"
+import empanadas from "../../../public/images/empanadas.jpeg"
+import asado from "../../../public/images/asado-2.jpeg"
+import carbonada from "../../../public/images/carbonada.jpg"
+import bife2 from "../../../public/images/bife-2.jpg"
+import choripan from "../../../public/images/choripan.jpg"
+import empanadas2 from "../../../public/images/empanadas-2.jpg"
+import locro from "../../../public/images/locro.jpg"
+import milanesa from "../../../public/images/milanesa-2.jpg"
 
 
 function Galeria() {
@@ -18,27 +30,27 @@ function Galeria() {
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\assets\imagenes\port-2.jpeg" alt="" />
+				<img src={bife} alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\assets\imagenes\port-3.jpeg" alt="" />
+				<img src={pizza} alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\assets\imagenes\port-4.jpeg" alt="" />
+				<img src={carne} alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\assets\imagenes\port-5.jpeg" alt="" />
+				<img src={tamales} alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\assets\imagenes\port-6.jpeg" alt="" />
+				<img src={empanadas} alt="" />
 			</a>
 		</div>
 	  </div>
@@ -52,7 +64,7 @@ function Galeria() {
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\assets\imagenes\asado.jpeg" alt="asado" />
+								<img src={asado} alt="asado" />
 							</div>
 							<h2>Asado</h2>
 							<p>Acompañada de guarnición</p>
@@ -61,7 +73,7 @@ function Galeria() {
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\assets\imagenes\carbonada.jpg" alt="Carbonada" />
+								<img src={carbonada} alt="Carbonada" />
 							</div>
 							<h2>Carbonada</h2>
 							<p>Acompañada de variedades de panes</p>
@@ -70,7 +82,7 @@ function Galeria() {
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\assets\imagenes\bife.jpg" alt="Bife" />
+								<img src={bife2} alt="Bife" />
 							</div>
 							<h2>Bife</h2>
 							<p>Acompañada de guarnición</p>
@@ -79,7 +91,7 @@ function Galeria() {
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\assets\imagenes\choripan.jpg" alt="Choripan" />
+								<img src={choripan} alt="Choripan" />
 							</div>
 							<h2>Choripan</h2>
 							<p>Acompañada de entrada</p>
@@ -88,7 +100,7 @@ function Galeria() {
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\assets\imagenes\empanadas.jpg" alt="Empanadas" />
+								<img src={empanadas2} alt="Empanadas" />
 							</div>
 							<h2>Empanadas</h2>
 							<p>Acompañada de entrada</p>
@@ -97,7 +109,7 @@ function Galeria() {
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\assets\imagenes\locro.jpg" alt="Locro" />
+								<img src={locro} alt="Locro" />
 							</div>
 							<h2>Locro</h2>
 							<p>Acompañada de entrada</p>
@@ -106,7 +118,7 @@ function Galeria() {
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\assets\imagenes\milanesa.jpg" alt="Milanesa" />
+								<img src={milanesa} alt="Milanesa" />
 							</div>
 							<h2>Milanesa</h2>
 							<p>Acompañada de guarnición</p>
