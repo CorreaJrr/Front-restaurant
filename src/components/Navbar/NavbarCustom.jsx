@@ -8,7 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { alertGeneric } from '../../utils/alertMajor';
-
+import logoNav from '../../../public/images/Logo-Sabor-Argentino.png'
 
 function NavbarCustom() {
   const userAvt = localStorage.getItem('userAvatar')
@@ -18,7 +18,7 @@ function NavbarCustom() {
         <Navbar.Brand href="#home">
           <Link to="/adminpage">
           <img
-          src='/src/assets/images/Logo-Sabor-Argentino.png'
+          src={logoNav}
           width="50"
           height="50"
           className="d-inline-block align-top"
