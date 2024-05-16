@@ -14,6 +14,22 @@ import choripan from "../../../public/images/choripan.jpg"
 import empanadas2 from "../../../public/images/empanadas-2.jpg"
 import locro from "../../../public/images/locro.jpg"
 import milanesa from "../../../public/images/milanesa-2.jpg"
+import ñoquis from "../../../public/images/ñoqui.jpg"
+import medialunas from "../../../public/images/medialunas.jpeg"
+import medialunas2 from "../../../public/images/medialunas2.jpeg"
+import merienda from "../../../public/images/dulce.jpeg"
+import conito from "../../../public/images/conito.jpeg"
+import maicena from "../../../public/images/maicenas.jpeg"
+import alfajor from "../../../public/images/alfajor.jpeg"
+import medialunas3 from "../../../public/images/medialunas3.jpg"
+import churros from "../../../public/images/churros.jpg"
+import chipa from "../../../public/images/chipa.jpg"
+import tortaNegra from "../../../public/images/tortasnegras.jpg"
+import rojel from "../../../public/images/rojel.jpeg"
+import alfajores from "../../../public/images/alfajores.jpeg"
+import bolasFraile from "../../../public/images/bolasdefraile.jpeg"
+import pastafrola from "../../../public/images/pastafrola.jpeg"
+
 
 
 function Galeria() {
@@ -127,7 +143,7 @@ function Galeria() {
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\assets\imagenes\ñoqui.jpg" alt="Ñoquis de Papa" />
+								<img src={ñoquis} alt="Ñoquis de Papa" />
 							</div>
 							<h2>Ñoquis de Papa</h2>
 							<p>Acompañada de entrada</p>
@@ -143,32 +159,32 @@ function Galeria() {
       <div className='wrapper'>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\assets\imagenes\port-7.jpeg" alt="" />
+				<img src={medialunas} alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\assets\imagenes\port-8.jpeg" alt="" />
+				<img src={medialunas2} alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\assets\imagenes\port-9.jpeg" alt="" />
+				<img src={merienda} alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\assets\imagenes\port-10.jpeg" alt="" />
+				<img src={conito} alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\assets\imagenes\port-11.jpeg" alt="" />
+				<img src={maicena} alt="" />
 			</a>
 		</div>
 		<div className='single-box'>
 			<a href="#">
-				<img src="src\assets\imagenes\port-12.jpeg" alt="" />
+				<img src={alfajor} alt="" />
 			</a>
 		</div>
 	  </div>
@@ -182,7 +198,7 @@ function Galeria() {
 					<div class="card-Desayuno">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\assets\imagenes\medialunas.jpg" alt="Medialunas" />
+								<img src={medialunas3} alt="Medialunas" />
 							</div>
 							<h2>Medialunas</h2>
 							<p>Acompañada de cualquier infusion</p>
@@ -191,7 +207,7 @@ function Galeria() {
 					<div class="card-Desayuno">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\assets\imagenes\churros.jpg" alt="Churros" />
+								<img src={churros} alt="Churros" />
 							</div>
 							<h2>Churros</h2>
 							<p>Acompañada de cualquier infusion</p>
@@ -200,7 +216,7 @@ function Galeria() {
 					<div class="card-Desayuno">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\assets\imagenes\chipa.jpg" alt="Chipa" />
+								<img src={chipa} alt="Chipa" />
 							</div>
 							<h2>Chipa</h2>
 							<p>Acompañada de cualquier infusion</p>
@@ -209,7 +225,7 @@ function Galeria() {
 					<div class="card-Desayuno">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\assets\imagenes\tortasnegras.jpg" alt="Torta-Negra" />
+								<img src={tortaNegra} alt="Torta-Negra" />
 							</div>
 							<h2>Torta Negra</h2>
 							<p>Acompañada de cualquier infusion</p>
@@ -218,7 +234,7 @@ function Galeria() {
                     <div class="card-Desayuno">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\assets\imagenes\rojel.jpeg" alt="Torta Rojel" />
+								<img src={rojel} alt="Torta Rojel" />
 							</div>
 							<h2>Torta Rojel</h2>
 							<p>Acompañada de cualquier infusion</p>
@@ -227,7 +243,7 @@ function Galeria() {
                     <div class="card-Desayuno">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\assets\imagenes\alfajores.jpeg" alt="Alfajores" />
+								<img src={alfajores} alt="Alfajores" />
 							</div>
 							<h2>Alfajores</h2>
 							<p>Acompañada de cualquier infusion</p>
@@ -236,7 +252,7 @@ function Galeria() {
                     <div class="card-Desayuno">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\assets\imagenes\bolasdefraile.jpeg" alt="Bolas de Fraile" />
+								<img src={bolasFraile} alt="Bolas de Fraile" />
 							</div>
 							<h2>Bolas de Fraile</h2>
 							<p>Acompañada de cualquier infusion</p>
@@ -245,7 +261,7 @@ function Galeria() {
                     <div class="card-Desayuno">
 						<div class="card">
 							<div class="card-img">
-								<img src="src\assets\imagenes\pastafrola.jpeg" alt="Pasta Frola" />
+								<img src={pastafrola} alt="Pasta Frola" />
 							</div>
 							<h2>Pasta Frola</h2>
 							<p>Acompañada de cualquier infusion</p>
