@@ -17,8 +17,7 @@ const BookingPanel = () => {
 //funcion que devuelve las reservas realizadas
   const getAllBookings = async () => {
     try {
-      setIsLoading(true)
-      const { data } = await clientAxios.get(`/bookings`);
+      const { data } = await clientAxios.get(`/bookings`,);
       setBookings(data);
     } catch (error) {
       alertGeneric(mensajes.genericGetError, 'Uppss...', 'error');
