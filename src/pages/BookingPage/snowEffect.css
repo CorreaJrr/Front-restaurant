@@ -10,7 +10,7 @@ body{
   }
   .bodyR{
 
-    background-image: url('../../../public/images/bar2.jpg');
+    background-image: url('../../assets/images/bar2.jpg');
   
     object-fit: cover;
   
