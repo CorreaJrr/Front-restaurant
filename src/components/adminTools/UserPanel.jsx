@@ -6,9 +6,11 @@ import { mensajes } from '../../utils/messages';
 import LoadingScreen from '../../components/LoadingScreen/LoadingScreen.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import clientAxios from '../../utils/clientAxios.js';
+import { useNavigate } from 'react-router-dom';
 
 
 const UserPanel = () => {
+  const navigate = useNavigate()
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const URL_BASE = import.meta.env.VITE_URL_BASE;
@@ -152,7 +154,7 @@ const UserPanel = () => {
                       name: e.target.value,
                     })
                   }
-                />
+                  />
               </Form.Group>
               <Form.Group controlId="formLastName">
                 <Form.Label>Apellido</Form.Label>
@@ -166,7 +168,7 @@ const UserPanel = () => {
                       lastName: e.target.value,
                     })
                   }
-                />
+                  />
               </Form.Group>
 
               <Form.Group controlId="formEmail">
@@ -181,7 +183,7 @@ const UserPanel = () => {
                       email: e.target.value,
                     })
                   }
-                />
+                  />
               </Form.Group>
               <Form.Group controlId="formAvatar">
                 <Form.Label>Avatar</Form.Label>
@@ -195,7 +197,7 @@ const UserPanel = () => {
                       avatar: e.target.value,
                     })
                   }
-                />
+                  />
               </Form.Group>
             </Form>
           </Modal.Body>
@@ -209,6 +211,7 @@ const UserPanel = () => {
           </Modal.Footer>
         </Modal>
         </Col>
+          <Button onClick={() => navigate ('/adminpagebooking')}>Panel de reservas</Button>
       </Row>
     </Container>
   )
