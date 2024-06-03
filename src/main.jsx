@@ -21,6 +21,7 @@ import ErrorLogPage from './pages/ErrorLogPage/ErrorLogPage.jsx';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen.jsx';
 import HomePageB from './pages/HomePage&Booking/HomePage&Booking.jsx';
 import GalleryPage from './pages/GalleryPage/GalleryPage.jsx';
+import AdminPageBooking from './pages/AdminPage/AdminPageBooking.jsx';
 
 const userLog = localStorage.getItem('token')
 const userBooking = JSON.parse(localStorage.getItem('UserBooking'))
@@ -38,6 +39,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='/aboutus' element={<AboutUsPage />}/>
       <Route path='/booking' element={ userLog == null ? <ErrorLogPage/> : <BookingPage/>}/>
       <Route path='/adminpage' element={ userLog == null ? <ErrorLogPage /> : <AdminPage/>}/>
+      <Route path='/adminpagebooking' element={ userLog == null ? <ErrorLogPage /> : <AdminPageBooking/>}/>
       {/* <Route path='/gallery' element={<Galeria />}/> */}
       <Route path='/gallery' element={<GalleryPage />}/>
       <Route path='*' element={<Error404Page/>}/>
