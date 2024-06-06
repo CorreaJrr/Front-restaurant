@@ -211,7 +211,6 @@ const UserPanel = () => {
           </Modal.Footer>
         </Modal>
         </Col>
-          <Button onClick={() => navigate ('/adminpagebooking')}>Panel de reservas</Button>
       </Row>
     </Container>
   )

@@ -55,9 +55,7 @@ const BookingPanel = () => {
   }
 
   useEffect(() => {
-    return () => {
       getAllBookings()
-    }
   }, [changeFlag]);
   
 
