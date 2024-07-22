@@ -10,25 +10,25 @@ function Footer() {
             <div className='links'>
                 <div className='links_div'>
                     <h4>Contactanos</h4>
-                    <a href="">
+                    <a href="instagram">
                         <p><BiLogoInstagram/> Sabor Argentino</p>
                     </a>
-                    <a href="">
+                    <a href="email">
                         <p><BiLogoGmail/> saborargentino@gmail.com</p>
                     </a>
-                    <a href="">
+                    <a href="celular">
                         <p><BiSolidPhone/> +54 0381 1234567</p>
                     </a>
                 </div>
                 <div className='links_div'>
                     <h4>Sucursales</h4>
-                    <a href="">
+                    <a href="sucursal">
                         <p>Congreso 767</p>
                     </a>
-                    <a href="">
+                    <a href="sucursal">
                         <p>Av. Sarmiento 232</p>
                     </a>
-                    <a href="">
+                    <a href="sucursal">
                         <p>12 de Octubre 490</p>
                     </a>
                 </div>

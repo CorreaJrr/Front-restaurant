@@ -42,7 +42,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       {/* <Route path='/gallery' element={<Galeria />}/> */}
       <Route path='/gallery' element={<GalleryPage />}/>
       <Route path='*' element={<Error404Page/>}/>
-      <Route path='/404' element={<Error404Page/>}/>
       <Route path='/edituser' element={ userLog == null ? <ErrorLogPage/> : <EditUserPage/>}/>
       <Route path='/loadingscreen' element={<LoadingScreen/>}/>
 

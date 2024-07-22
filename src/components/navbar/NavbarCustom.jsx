@@ -16,7 +16,7 @@ function NavbarCustom() {
     <Navbar expand="lg" className="bg-body-tertiary ">
       <Container>
         <Navbar.Brand href="#home">
-          <Link to="/adminpage">
+          <Link to="/">
           <img
           src={logoNav}
           width="50"
@@ -29,9 +29,9 @@ function NavbarCustom() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="">
-          <Link to='/'>
+          {/* <Link to='/'>
           <Nav.Link className='navButton text-dark fw-bold' href="#home">Home</Nav.Link>
-          </Link>
+          </Link> */}
           <Link to='/booking'>
         <Nav.Link className='navButton text-dark fw-bold' href="#features">Reservar</Nav.Link>
           </Link>
