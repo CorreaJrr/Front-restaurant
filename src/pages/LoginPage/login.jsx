@@ -1,6 +1,7 @@
-import './LoginStyles.css';
+
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import '../LoginPage/LoginStyles.css'
 import { mensajes } from '../../utils/messages';
 import { alertGeneric } from '../../utils/alertMajor';
 import axios from 'axios';
@@ -66,31 +67,55 @@ const Login = () => {
   };
 
   return (
-    <Container className='' id='container1'>
-      <Container className='' id='container2'>
+    <div id='container1'>
+      <div id='container2'>
         <Row className='justify-content-center my-5'>
-          <h1>Login</h1>
-          <Col xs={12} md={8} lg={6}>
-            <Form onSubmit={handleSubmit}>
-              <Form.Group className="mb-3">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="text" placeholder="Enter email" name='email' required onChange={handleChangeFormData} />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" name='password' required onChange={handleChangeFormData} />
-              </Form.Group>
-              <Col className='text-danger my-3'>
-                <strong>{mensaje}</strong>
-              </Col>
-              <Button variant="primary" type="submit" disabled={isLoading}>
-                {isLoading ? 'Cargando...' : 'Login'}
-              </Button>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
-    </Container>
+            <h1>Login</h1>
+            <Col xs={12} md={8} lg={6}>
+              <Form onSubmit={handleSubmit}>
+                <Form.Group className="mb-3">
+                  <Form.Label>Email address</Form.Label>
+                  <Form.Control type="text" placeholder="Enter email" name='email' required onChange={handleChangeFormData} />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control type="password" placeholder="Password" name='password' required onChange={handleChangeFormData} />
+                </Form.Group>
+                <Col className='text-danger my-3'>
+                  <strong>{mensaje}</strong>
+                </Col>
+                <Button variant="primary" type="submit" disabled={isLoading}>
+                  {isLoading ? 'Cargando...' : 'Login'}
+                </Button>
+              </Form>
+            </Col>
+          </Row>
+      </div>
+    </div>
+
+      // <Container className='' id='container1'>
+      //   <Row className='justify-content-center my-5'>
+      //     <h1>Login</h1>
+      //     <Col xs={12} md={8} lg={6}>
+      //       <Form onSubmit={handleSubmit}>
+      //         <Form.Group className="mb-3">
+      //           <Form.Label>Email address</Form.Label>
+      //           <Form.Control type="text" placeholder="Enter email" name='email' required onChange={handleChangeFormData} />
+      //         </Form.Group>
+      //         <Form.Group className="mb-3">
+      //           <Form.Label>Password</Form.Label>
+      //           <Form.Control type="password" placeholder="Password" name='password' required onChange={handleChangeFormData} />
+      //         </Form.Group>
+      //         <Col className='text-danger my-3'>
+      //           <strong>{mensaje}</strong>
+      //         </Col>
+      //         <Button variant="primary" type="submit" disabled={isLoading}>
+      //           {isLoading ? 'Cargando...' : 'Login'}
+      //         </Button>
+      //       </Form>
+      //     </Col>
+      //   </Row>
+      // </Container>
   )
 };
 
