@@ -45,6 +45,7 @@ const Login = () => {
       localStorage.setItem('userID', (data.userID))
       localStorage.setItem('token', (data.token))
       localStorage.setItem('userAvatar', (data.userAvatar))
+      localStorage.setItem('userRole', (data.userRole))
       if (data.userBooking) {
         localStorage.setItem('UserBooking', (data.userBooking))
       }
