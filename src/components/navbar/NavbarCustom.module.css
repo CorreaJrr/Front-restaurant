@@ -15,3 +15,7 @@
 .navHeight {
     height: 100px !important;
 }
+
+.subItem1 {
+    display: none;
+}
