@@ -229,8 +229,12 @@ hr {
   transform: scale(1.1);
 }
 
-.picada {
+.parrillita {
   border-radius: 20px;
+}
+
+.almanaque {
+  border-radius:20px;
 }
 
 .imagenPi {
@@ -249,17 +253,25 @@ hr {
   transform: scale(1.1);
 }
 
-.picada {
+.parrillita {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  object-fit: cover;
+}
+.almanaque {
   width: 100%;
   height: 100%;
   transition: 0.5s;
   object-fit: cover;
 }
 
-.picada:hover {
+.parrillita:hover {
   transform: scale(1.1);
 }
-
+.almanaque:hover {
+  transform: scale(1.1);
+}
 @media screen and (max-width:761px) {
 
   .imgCa {

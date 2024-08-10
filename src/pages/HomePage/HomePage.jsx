@@ -6,12 +6,14 @@ import { alertGeneric } from '../../utils/alertMajor';
 import { mensajes } from '../../utils/messages';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+
 
 
 const Homepage = () => {
-  const navigate = useNavigate()
-  const user = localStorage.getItem('token');
+const navigate = useNavigate()
+const user = localStorage.getItem('token');
   const Booking = JSON.parse(localStorage.getItem('UserBooking'))
   if (Booking){
     const TBooking = true;
@@ -114,7 +116,7 @@ const Homepage = () => {
                   </p>
                 </Col>
                 <Col className=' mt-1' sm={6} >
-                  <Image className='picada w-100' alt='imagen de carne asada'
+                  <Image className='parrillita w-100' alt='imagen de parrillita con carne'
                     src="./images/parrillita.webp" fluid
                   />
                 </Col>
@@ -131,7 +133,7 @@ const Homepage = () => {
                   </div>
                 </Col>
                 <Col className=' mt-1' sm={6} >
-                  <Image className='picada' alt='imagen de almanaque'
+                  <Image className='almanaque' alt='imagen de almanaque'
                     src="./images/reserva.png" fluid
                   />
                 </Col>

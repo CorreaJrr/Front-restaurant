@@ -10,6 +10,9 @@ import { useEffect, useState } from 'react';
 import clientAxios from '../../utils/clientAxios';
 
 
+
+
+
 const HomePageB = () => {
   const navigate = useNavigate()
   const user = localStorage.getItem('token');
@@ -86,7 +89,7 @@ const HomePageB = () => {
               <Row className='body mb-2'>
                 <Col className=' mt-3 pb-3 ' sm={4}>
                   <Card className=" cards  bg-dark text-white  ">
-                    <Card.Img src="./images/empanadasN.png" alt="Card image" />
+                    <Card.Img src="./images/empanadasN.png" alt="imagen de empanadas" />
                     <Card.ImgOverlay>
                       <Card.Title className='titulo1 px-3'>Empanadas</Card.Title>
                     </Card.ImgOverlay>
@@ -94,7 +97,7 @@ const HomePageB = () => {
                 </Col>
                 <Col className=' mt-3' sm={4}>
                   <Card className="cards  bg-dark text-white  ">
-                    <Card.Img src="./images/tamaln.png" alt="Card image" />
+                    <Card.Img src="./images/tamaln.png" alt="imagen de tamales" />
                     <Card.ImgOverlay>
                       <Card.Title className='titulo1 px-2'>Tamales</Card.Title>
                     </Card.ImgOverlay>
@@ -102,7 +105,7 @@ const HomePageB = () => {
                 </Col>
                 <Col className=' mt-3 pb-3' sm={4}>
                   <Card className=" cards bg-dark text-white  ">
-                    <Card.Img src="./images/locroN.png" alt="Card image" />
+                    <Card.Img src="./images/locroN.png" alt="imagen de locro" />
                     <Card.ImgOverlay>
                       <Card.Title className='titulo1 px-2'>Locro</Card.Title>
                     </Card.ImgOverlay>
@@ -112,7 +115,7 @@ const HomePageB = () => {
               <Row className='body'>
                 <Col className=' mt-3 pb-3' sm={4}>
                   <Card className=" cards  bg-dark text-white  ">
-                    <Card.Img src="./images/pizzaN.png" alt="Card image" />
+                    <Card.Img src="./images/pizzaN.png" alt="imagen de una pizza" />
                     <Card.ImgOverlay>
                       <Card.Title className='titulo1 px-2'>Pizza</Card.Title>
                     </Card.ImgOverlay>
@@ -120,7 +123,7 @@ const HomePageB = () => {
                 </Col>
                 <Col className=' mt-3' sm={4}>
                   <Card className=" cards  bg-dark text-white  ">
-                    <Card.Img src="./images/milanesaN.png" alt="Card image" />
+                    <Card.Img src="./images/milanesaN.png" alt="imagen milanesa napolitana" />
                     <Card.ImgOverlay>
                       <Card.Title className='titulo1 px-2'>Napolitana</Card.Title>
                     </Card.ImgOverlay>
@@ -128,7 +131,7 @@ const HomePageB = () => {
                 </Col>
                 <Col className=' mt-3 pb-3' sm={4}>
                   <Card className=" cards  bg-dark text-white  ">
-                    <Card.Img src="./images/costilla.jpg" alt="Card image" />
+                    <Card.Img src="./images/costilla.jpg" alt="imagen de costilla de carne" />
                     <Card.ImgOverlay>
                       <Card.Title className='titulo1 px-2'>Costilla</Card.Title>
                     </Card.ImgOverlay>
@@ -143,7 +146,7 @@ const HomePageB = () => {
                   </p>
                 </Col>
                 <Col className=' mt-1' sm={6} >
-                  <Image className='picada w-100'
+                  <Image className='parrillita w-100' alt='imagen de parrillita con carne'
                     src="./images/parrillita.webp" fluid
                   />
                 </Col>
@@ -160,7 +163,7 @@ const HomePageB = () => {
                   </div>
                 </Col>
                 <Col className=' mt-1' sm={6} >
-                  <Image className='picada'
+                  <Image className='almanaque' alt='imagen de almanaque'
                     src="./images/reserva.png" fluid
                   />
                 </Col>
