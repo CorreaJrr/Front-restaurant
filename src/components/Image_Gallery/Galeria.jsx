@@ -83,16 +83,16 @@ function Galeria() {
 								<img src={asado} alt="imagen de asado" />
 							</div>
 							<h2>Asado</h2>
-							<p>Acompañada de guarnición</p>
+							<p>Acompañada de Guarnición</p>
 						</div>
 					</div>
 					<div class="card-Almuerzo">
 						<div class="card">
 							<div class="card-img">
-								<img src={carbonada} alt="imagen de Carbonada" />
+								<img src={carbonada}  alt="imagen de Carbonada" />
 							</div>
 							<h2>Carbonada</h2>
-							<p>Acompañada de variedades de panes</p>
+							<p>Acompañada con Panes</p>
 						</div>
 					</div>
 					<div class="card-Almuerzo">
@@ -101,7 +101,7 @@ function Galeria() {
 								<img src={bife2} alt="imagen de Bife" />
 							</div>
 							<h2>Bife</h2>
-							<p>Acompañada de guarnición</p>
+							<p>Acompañada de Guarnición</p>
 						</div>
 					</div>
 					<div class="card-Almuerzo">
@@ -110,7 +110,7 @@ function Galeria() {
 								<img src={choripan} alt="imagen de Choripan" />
 							</div>
 							<h2>Choripan</h2>
-							<p>Acompañada de entrada</p>
+							<p>Acompañada de Entradas</p>
 						</div>
 					</div>
 					<div class="card-Almuerzo">
@@ -119,7 +119,7 @@ function Galeria() {
 								<img src={empanadas2} alt="imagen de empanadas" />
 							</div>
 							<h2>Empanadas</h2>
-							<p>Acompañada de entrada</p>
+							<p>Acompañada de Guarnicion</p>
 						</div>
 					</div>
 					<div class="card-Almuerzo">
@@ -128,7 +128,7 @@ function Galeria() {
 								<img src={locro} alt="imagen de locro" />
 							</div>
 							<h2>Locro</h2>
-							<p>Acompañada de entrada</p>
+							<p>Acompañada de Entradas</p>
 						</div>
 					</div>
 					<div class="card-Almuerzo">
@@ -137,7 +137,7 @@ function Galeria() {
 								<img src={milanesa} alt="imagen de milanesa" />
 							</div>
 							<h2>Milanesa</h2>
-							<p>Acompañada de guarnición</p>
+							<p>Acompañada de Guarnición</p>
 						</div>
 					</div>
 					<div class="card-Almuerzo">
@@ -146,7 +146,7 @@ function Galeria() {
 								<img src={ñoquis} alt="imagen de ñoquis de Papa" />
 							</div>
 							<h2>Ñoquis de Papa</h2>
-							<p>Acompañada de entrada</p>
+							<p>Acompañada de Entrada</p>
 						</div>
 					</div>
 				</div>
@@ -200,7 +200,7 @@ function Galeria() {
 							<div class="card-img">
 								<img src={medialunas3} alt="imagen de medialunas" />
 							</div>
-							<h2>Medialunas</h2>
+							<h2> Medialunas</h2>
 							<p>Acompañada de cualquier infusion</p>
 						</div>
 					</div>
@@ -209,7 +209,7 @@ function Galeria() {
 							<div class="card-img">
 								<img src={churros} alt="imagen de churros" />
 							</div>
-							<h2>Churros</h2>
+							<h2> Churros</h2>
 							<p>Acompañada de cualquier infusion</p>
 						</div>
 					</div>
@@ -218,7 +218,7 @@ function Galeria() {
 							<div class="card-img">
 								<img src={chipa} alt="imagen de chipa" />
 							</div>
-							<h2>Chipa</h2>
+							<h2> Chipa</h2>
 							<p>Acompañada de cualquier infusion</p>
 						</div>
 					</div>
@@ -227,7 +227,7 @@ function Galeria() {
 							<div class="card-img">
 								<img src={tortaNegra} alt="imagen de torta negra" />
 							</div>
-							<h2>Torta Negra</h2>
+							<h2> Torta Negra</h2>
 							<p>Acompañada de cualquier infusion</p>
 						</div>
 					</div>
@@ -236,7 +236,7 @@ function Galeria() {
 							<div class="card-img">
 								<img src={rojel} alt=" imagen de torta rojel" />
 							</div>
-							<h2>Torta Rojel</h2>
+							<h2> Torta Rojel</h2>
 							<p>Acompañada de cualquier infusion</p>
 						</div>
 					</div>
@@ -245,7 +245,7 @@ function Galeria() {
 							<div class="card-img">
 								<img src={alfajores} alt="imagen de alfajores" />
 							</div>
-							<h2>Alfajores</h2>
+							<h2> Alfajores</h2>
 							<p>Acompañada de cualquier infusion</p>
 						</div>
 					</div>
@@ -254,7 +254,7 @@ function Galeria() {
 							<div class="card-img">
 								<img src={bolasFraile} alt="imagen de bolas de fraile" />
 							</div>
-							<h2>Bolas de Fraile</h2>
+							<h2> Bolas de Fraile</h2>
 							<p>Acompañada de cualquier infusion</p>
 						</div>
 					</div>
@@ -263,7 +263,7 @@ function Galeria() {
 							<div class="card-img">
 								<img src={pastafrola} alt="imagen de pasta frola" />
 							</div>
-							<h2>Pasta Frola</h2>
+							<h2> Pasta Frola</h2>
 							<p>Acompañada de cualquier infusion</p>
 						</div>
 					</div>
