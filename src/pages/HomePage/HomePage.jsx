@@ -12,7 +12,19 @@ import { useEffect, useState } from 'react';
 
 
 const Homepage = () => {
-const navigate = useNavigate()
+  const [isLoading, setIsLoading] = useState(false);
+  const [changeFlag, setChangeFlag] = useState(false);
+  const navigate = useNavigate();
+const reloadPage = async () => {
+  try {
+    if (changeFlag == false) {
+      setChangeFlag(true)
+      navigate('/')
+    }
+  } catch (error) {
+    alertGeneric('Error', 'Upss' , 'error')
+  }
+}
 const user = localStorage.getItem('token');
   const Booking = JSON.parse(localStorage.getItem('UserBooking'))
   if (Booking){

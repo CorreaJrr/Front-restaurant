@@ -22,11 +22,10 @@ const UserPanel = () => {
     try {
       setIsLoading(true);
       const token = localStorage.getItem('token');
-      
       const { data } = await clientAxios.get(`/users`,);
       setUsers(data);
     } catch (error) {
-      alertGeneric(messages.genericGetError, 'Uppss...', 'error');
+      alertGeneric(mensajes.genericGetError, 'Uppss...', 'error');
     } finally {
       setIsLoading(false);
     }
