@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Form, Button, Container, Row, Col } from 'react-bootstrap'
 import '../../utils/valiDate';
 import { useState } from 'react';
@@ -16,7 +16,7 @@ const BookingPage = () => {
   const navigate = useNavigate()
   const ExistBooking = localStorage.getItem('UserBooking');
   if (ExistBooking) {
-    alertGeneric('Puedes cancelar la reserva y luego hacer otra', 'Ya tienes una reserva', 'error', () => navigate('/login'))
+    alertGeneric('Puedes cancelar la reserva y luego hacer otra', 'Ya tienes una reserva', 'error', () => navigate('/'))
   }
   const [BookingData, setBookingData] = useState({
     email: '',
@@ -80,7 +80,15 @@ const BookingPage = () => {
       ...prev,
       [e.target.name]: e.target.value,
     }));
-  };  
+  };
+
+  useEffect(() => {
+    const userLog = localStorage.getItem('token')
+    if (!userLog) {
+      navigate('/login')
+    }
+  }, [])
+
   return (
 <>
   <div class="snowflakes" aria-hidden="true">

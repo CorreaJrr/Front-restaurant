@@ -7,7 +7,7 @@ import LoadingScreen from '../../components/LoadingScreen/LoadingScreen.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import clientAxios from '../../utils/clientAxios.js';
 import { useNavigate } from 'react-router-dom';
-
+import './EditUserPage.css'
 
 const EditUserPage = () => {
     const userID = localStorage.getItem('userID')
@@ -58,26 +58,6 @@ const EditUserPage = () => {
         getUser();
       }, [changeFlag]);
     
-      const closeSession = async() => {
-        try {
-          if (confirm('Quieres cerrar sesion?')) {
-            setIsLoading(true);
-            localStorage.removeItem('token');
-            localStorage.removeItem('userID');
-            localStorage.removeItem('UserBooking');
-            localStorage.removeItem('userAvatar');
-            localStorage.removeItem('userRole');
-            navigate('/')
-          } else {
-            return;
-          }
-          setChangeFlag(!changeFlag);
-        } catch (error) {
-          alertGeneric(mensajes.genericErrorPost, 'Uppss...', 'error');
-        } finally {
-          setIsLoading(false);
-        }
-      };
     
       const handleChangeStatus = async(e, user) => {
         setShowEditModal(false);
@@ -93,8 +73,14 @@ const EditUserPage = () => {
         }
       }
 
+      useEffect(() => {
+        const userLog = localStorage.getItem('token')
+        if (!userLog) {
+          navigate('/login')
+        }
+      }, [])
       return (
-        <Container>
+        <Container className='editUserContainer'>
           <Row>
             <Col>
               { isLoading 
@@ -123,7 +109,6 @@ const EditUserPage = () => {
                                 </td>
                                 <td className='text-center'>
                                   <Col className='d-flex justify-content-center'>
-                                    <Button className='btn-sm btn-danger mx-2' onClick={() => closeSession()}>Close Session</Button>
                                     <Button className='btn-sm' variant="success" onClick={() => handleEdit(usuario)}>
                                       Edit
                                     </Button>

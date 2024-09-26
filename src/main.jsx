@@ -33,16 +33,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
     <NavbarCustom />
     <Routes>
-      <Route path='/' element={userBooking == null ? <HomePage/> : <HomePageB/>}/>
+      <Route path='/' element={<HomePage/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
       <Route path='/aboutus' element={<AboutUsPage />}/>
-      <Route path='/booking' element={ userLog == null ? <ErrorLogPage/> : <BookingPage/>}/>
-      <Route path='/adminpage' element={ userLog == null ? <ErrorLogPage /> : <AdminPage/>}/>
-      {/* <Route path='/gallery' element={<Galeria />}/> */}
+      <Route path='/booking' element={<BookingPage/>}/>
+      <Route path='/adminpage' element={<AdminPage/>}/>
       <Route path='/gallery' element={<GalleryPage />}/>
       <Route path='*' element={<Error404Page/>}/>
-      <Route path='/edituser' element={ userLog == null ? <ErrorLogPage/> : <EditUserPage/>}/>
+      <Route path='/edituser' element={<EditUserPage/>}/>
       <Route path='/loadingscreen' element={<LoadingScreen/>}/>
 
     </Routes>

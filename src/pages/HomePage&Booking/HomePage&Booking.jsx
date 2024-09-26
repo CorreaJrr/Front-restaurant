@@ -47,6 +47,7 @@ const HomePageB = () => {
       if(confirm('Quieres Cancelar la Reserva? Puedes Realizar Otra')){
         await clientAxios.delete(`/bookings/delete/${id}`)
         localStorage.removeItem('UserBooking')
+        navigate('/')
         
       } else {
         return

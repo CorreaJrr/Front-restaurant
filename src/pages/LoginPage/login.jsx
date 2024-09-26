@@ -50,7 +50,9 @@ const Login = () => {
         localStorage.setItem('UserBooking', (data.userBooking))
       }
 
-      alertGeneric(mensajes.loginSuccess, 'Genial', 'success', () => navigate('/'));
+      alertGeneric(mensajes.loginSuccess, 'Genial', 'success', () => 
+        navigate('/'),
+      );
 
     } catch (error) {
       console.log(error);
