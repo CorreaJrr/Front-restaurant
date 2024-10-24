@@ -50,7 +50,7 @@ const HomePageB = () => {
         navigate('/')
         
       } else {
-        return
+        navigate('/booking')
       }
     } catch (error) {
       alertGeneric(mensajes.serverErrorGeneric, 'uppss', 'error')
@@ -160,7 +160,7 @@ const HomePageB = () => {
                   </p>
                   {/* cambiar color del boton */}
                   <div className='divB pb-3'>
-                    <Button className='botoN  mb-2 text-dark' variant="primary" onClick={handleReserve}> <Link to='/booking'>Reservar Ahora</Link></Button>
+                  <Button className='botoN  mb-2 text-dark' variant="primary" onClick={handleReserve}>Reservar Ahora</Button>
                   </div>
                 </Col>
                 <Col className=' mt-1' sm={6} >

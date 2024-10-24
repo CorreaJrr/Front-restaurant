@@ -2,7 +2,7 @@ import React from 'react'
 import './Footer.css'
 import 'react-icons/bi'
 import { BiLogoGmail, BiLogoInstagram, BiSolidPhone } from "react-icons/bi";
-
+import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <div className='footer'>
@@ -48,10 +48,10 @@ function Footer() {
                     </p>
                 </div>
                 <div className='abajo_links'>
-                    <a href="terms"><div><p>Terms & Conditions</p></div></a>
-                    <a href="privacy"><div><p>Privacy</p></div></a>
-                    <a href="segurity"><div><p>Security</p></div></a>
-                    <a href="cookie"><div><p>Cookie Declaration</p></div></a>
+                    <Link to='/Error404'><div><p>Terminos & Condiciones</p></div></Link>
+                    <Link to='/Error404'><div><p>Privacidad</p></div></Link>
+                    <Link to='/Error404'><div><p>Seguridad</p></div></Link>
+                    <Link to='/Error404'><div><p>Cookie Declaration</p></div></Link>
                 </div>
             </div>
         </div>

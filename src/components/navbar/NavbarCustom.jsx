@@ -73,7 +73,7 @@ function NavbarCustom() {
                 </NavDropdown.Item>
                 </Link>
               </NavDropdown>
-              <Nav.Link className='navButton text-dark fw-bold' href="#pricing" onClick={logout}>Cerrar Sesion</Nav.Link>
+              <Nav.Link className='navButton text-dark fw-bold' href="#pricing" onClick={() => logout()}>Cerrar Sesion</Nav.Link>
               <Link to='/edituser'> 
               <Nav.Link className='navButton text-dark fw-bold' href="#pricing"><img
               src={userAvt == null ? "https://i.imgur.com/ThLdImD.png" : `${userAvt}`}
@@ -112,9 +112,9 @@ function NavbarCustom() {
                 </NavDropdown.Item>
                 </Link>
               </NavDropdown>  
-              <Nav.Link className='navButton text-dark fw-bold ' href="#pricing" onClick={() => closeSession()}>Cerrar Sesion</Nav.Link>
+              <Nav.Link className='navButton text-dark fw-bold ' onClick={() => logout()}>Cerrar Sesion</Nav.Link>
               <Link to='/edituser'> 
-              <Nav.Link className='navButton text-dark fw-bold' href="#pricing"><img
+              <Nav.Link className='navButton text-dark fw-bold'><img
               src={userAvt == null ? "https://i.imgur.com/ThLdImD.png" : `${userAvt}`}
               width="35"
               height="35"
@@ -130,7 +130,7 @@ function NavbarCustom() {
                 </Link>
                 <NavDropdown title="Ingresa" id="basic-nav-dropdown">
                   <Link to='/login'> 
-                  <NavDropdown.Item href="#action/3.1">Log in</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">Iniciar Sesion</NavDropdown.Item>
                   </Link>
                   <Link to='/register'>
                   <NavDropdown.Item href="#action/3.2">

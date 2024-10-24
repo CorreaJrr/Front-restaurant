@@ -12,11 +12,11 @@ const Error404Page = () => {
       <section className='containerError'>
         <div id='Container01' className='error'>
             <div>
-              <h1  className='texto'>Error 404 Not Found, la pagina no se encuentra disponible. Disculpe las molestias.</h1>
+              <h1  className='texto'>Error 404 Not Found<br></br> La página no se encuentra disponible. Disculpe las molestias.</h1>
 
             </div>
             <div className='d-grid gap-2' >
-                <Button onClick={() => navigate ('/')} variant='light'>Back to homePage</Button>
+                <Button onClick={() => navigate ('/')} variant='light'>Volver al Inicio</Button>
 
             </div>
         </div>

@@ -128,34 +128,34 @@ const BookingPage = () => {
         <Col xs={12} md={8} lg={6}>
           <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" >
-              <Form.Label>Email adress</Form.Label>
-              <Form.Control type="email" placeholder="Enter email adress"  name='email' required onChange={handleChangeBookingData}/>
+              <Form.Label><h5 className='texto3'>Correo Electronico</h5></Form.Label>
+              <Form.Control type="email" placeholder="Ingresar Correo"  name='Correo' required onChange={handleChangeBookingData}/>
             </Form.Group>
             <Form.Group className="mb-3" >
-              <Form.Label>Day</Form.Label>
-              <Form.Control type="number" placeholder="Enter the Booking day" min='1' max='31' name='day' required onChange={handleChangeBookingData}/>
+              <Form.Label><h5 className='texto3'>Dia</h5></Form.Label>
+              <Form.Control type="number" placeholder="Ingresar el dia de la reserva" min='1' max='31' name='day' required onChange={handleChangeBookingData}/>
             </Form.Group>
             <Form.Group className="mb-3" >
-              <Form.Label>Hour</Form.Label>
-              <Form.Control type="number" placeholder="Enter the Hour" name='hour' min='13' max='21' required onChange={handleChangeBookingData}/>
+              <Form.Label><h5 className='texto3'>Hora</h5></Form.Label>
+              <Form.Control type="number" placeholder="Ingresar la Hora" name='hour' min='13' max='21' required onChange={handleChangeBookingData}/>
             </Form.Group>
             <Form.Group className="mb-3" >
-              <Form.Label>Month</Form.Label>
-              <Form.Control type="number" placeholder="Enter the Month" name='month' min='1' max='12' required onChange={handleChangeBookingData}/>
+              <Form.Label><h5 className='texto3'>Mes</h5></Form.Label>
+              <Form.Control type="number" placeholder="Ingresar el Mes" name='month' min='1' max='12' required onChange={handleChangeBookingData}/>
             </Form.Group>
             <Form.Group className="mb-3" >
-              <Form.Label>Year</Form.Label>
-              <Form.Control type="number" placeholder="Enter the Year" name='year' min={calendar.getFullYear()} max={calendar.getFullYear() + 1} required onChange={handleChangeBookingData}/>
+              <Form.Label><h5 className='texto3'>Año</h5></Form.Label>
+              <Form.Control type="number" placeholder="Ingresar el Año" name='year' min={calendar.getFullYear()} max={calendar.getFullYear() + 1} required onChange={handleChangeBookingData}/>
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Guests</Form.Label>
-              <Form.Control type="number" placeholder="How many Guests?" name='guests' min='1' max='15' required onChange={handleChangeBookingData}/>
+              <Form.Label><h5 className='texto3 '>Comensales</h5></Form.Label>
+              <Form.Control type="number" placeholder="Ingresar la cantidad de personas" name='guests' min='1' max='15' required onChange={handleChangeBookingData}/>
             </Form.Group>
             <Col className='text-danger my-3'>
               <strong>{mensajes}</strong>
             </Col>
-            <Button variant="primary" type="submit" disabled={isLoading}>
-              {isLoading ? 'Cargando...' : 'Make the Booking'}
+            <Button className='mt-3' variant="primary" type="submit" disabled={isLoading}>
+              {isLoading ? 'Cargando...' : 'Hacer la Reserva'}
             </Button>
           </Form>
         </Col>

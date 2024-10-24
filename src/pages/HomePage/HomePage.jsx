@@ -55,8 +55,11 @@ const Homepage = () => {
     try {
       if (user == null) {
         alertGeneric(mensajes.bookingFailure, "Uppss...", "error", () =>
-          navigate("/login")
+          navigate('/login')
         );
+      }
+      else {
+        navigate('/booking')
       }
     } catch (error) {
       alertGeneric(mensajes.serverErrorGeneric, "Uppss...", "error");
@@ -242,7 +245,7 @@ const Homepage = () => {
                     onClick={handleReserve}
                   >
                     {" "}
-                    <Link to="/booking">Reservar Ahora</Link>
+                    Reservar Ahora
                   </Button>
                 </div>
               </Col>
