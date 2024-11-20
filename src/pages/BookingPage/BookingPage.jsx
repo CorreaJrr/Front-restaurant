@@ -59,10 +59,14 @@ const BookingPage = () => {
           // return alertGeneric(mensajes.bookingSuccess, 'Reserva realizada con exito', 'success')
         }
       }
-      const { data } = await clientAxios.get(`/users/checkEmailExist/?email=${BookingData.email}`);
+      const { email } = BookingData
+      console.log(BookingData);
+      
+      const { data } = await clientAxios.get(`/users/checkEmailExist/?email=${email}`);
+      console.log(data);
+      
       if(!data) return alertGeneric(mensajes.bookingErrorEmail, 'Para poder realizar la reserva debes estar registrado', 'error', )
-      const emailBooking = await clientAxios.get(`/bookings/checkUserBooking/?email=${BookingData.email}`)
-      console.log(emailBooking.data);
+      const emailBooking = await clientAxios.get(`/bookings/checkUserBooking/?email=${email}`)
       if(emailBooking.data) return alertGeneric(mensajes.checkRegisterBooking, 'Solo se permite una reserva por usuario', 'error')
       await clientAxios.post(`/bookings/create`, BookingData)
       localStorage.setItem('UserBooking', JSON.stringify(BookingData))
@@ -80,6 +84,8 @@ const BookingPage = () => {
       ...prev,
       [e.target.name]: e.target.value,
     }));
+    console.log(BookingData);
+    
   };
 
   useEffect(() => {
@@ -129,7 +135,7 @@ const BookingPage = () => {
           <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" >
               <Form.Label><h5 className='texto3'>Correo Electronico</h5></Form.Label>
-              <Form.Control type="email" placeholder="Ingresar Correo"  name='Correo' required onChange={handleChangeBookingData}/>
+              <Form.Control type="email" placeholder="Ingresar Correo"  name='email' required onChange={handleChangeBookingData}/>
             </Form.Group>
             <Form.Group className="mb-3" >
               <Form.Label><h5 className='texto3'>Dia</h5></Form.Label>
