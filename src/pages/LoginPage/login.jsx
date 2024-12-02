@@ -38,8 +38,10 @@ const Login = () => {
     try {
       setIsLoading(true);
       /*const { datauser } = await axios.get(`${URL_BASE}/users/byId/:`)*/
-      const { data } = await axios.post(`${URL_BASE}/login`, formData);
-
+      const { data } = await clientAxios.post(`/login`, formData);
+      clientAxios.defaults.headers.common["Authorization"] = data.token
+      console.log(clientAxios);
+      
       if (typeof data === 'string') return alertGeneric(data, 'Uppss...', 'error');
 
       localStorage.setItem('userID', (data.userID))
